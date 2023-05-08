@@ -1,0 +1,3131 @@
+// * ===== Nullstyle =====
+@import "_nullstyle";
+
+// * ===== Fonts =====
+@import "_fonts";
+
+// * ===== Variables =====
+@import "_variables";
+
+//* ===== All container =====
+[class*="__container"] {
+   max-width: 1426px;
+   padding: 0 15px;
+   margin: 0 auto;
+}
+
+body {
+   background: rgba(32, 8, 59, 1);
+}
+.hidden {
+   height: 0px;
+   overflow: hidden;
+   transition: 1s;
+}
+.rotate {
+   transform: rotate(180deg);
+   transition: 0.5s;
+}
+
+//* ===== Wrapper =====
+.wrapper {
+   display: flex;
+   flex-direction: column;
+   overflow: hidden;
+   min-height: 100%;
+   max-width: 100%;
+}
+.header {
+   position: absolute;
+   top: 40px;
+   width: 100%;
+   min-height: 48px;
+   &__content {
+      display: flex;
+      align-items: center;
+   }
+
+   &__logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      top: 0px;
+      left: 10px;
+      z-index: 40;
+
+      & a {
+         font-family: "Orbitron";
+         font-weight: 700;
+         font-size: 20px;
+         line-height: 25px;
+         color: $gray;
+         margin-top: 3px;
+         & span {
+            color: $white;
+         }
+      }
+   }
+
+   &__menu {
+      width: 460px;
+      padding: 11px;
+      margin: 0 auto 0 223px;
+   }
+
+   &__menu-list {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
+
+   &__menu-link {
+      height: 26px;
+      font-family: "Orbitron";
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 25px;
+      color: $gray;
+   }
+   &__menu-users {
+      display: none;
+   }
+
+   &__basket {
+      margin-right: 41px;
+   }
+
+   &__item {
+      display: flex;
+      align-items: center;
+      margin-right: 10px;
+   }
+}
+// * ===== Main =====
+.main {
+   flex: 1 1 auto;
+}
+// * ===== Discover =====
+.discover {
+   margin-top: 88px;
+
+   &__content {
+      display: flex;
+      justify-content: space-between;
+   }
+
+   &__info {
+      margin-top: 105px;
+   }
+
+   &__title {
+      max-width: 848px;
+      width: 100%;
+      height: 181px;
+      font-family: "Spartan";
+      font-weight: 600;
+      font-size: 66px;
+      line-height: 137.4%;
+      color: $white;
+      margin-bottom: 23px;
+
+      & span {
+         background: linear-gradient(89.89deg, #ff56f6 2.33%, #42a6e3 101.4%);
+         -webkit-background-clip: text;
+         -webkit-text-fill-color: transparent;
+         background-clip: text;
+      }
+   }
+   &__text {
+      font-family: "Rajdhani";
+      font-weight: 400;
+      font-size: 27px;
+      line-height: 44px;
+      color: $white;
+      max-width: 658px;
+      width: 100%;
+      height: 89px;
+      margin-bottom: 40px;
+   }
+   &__btns {
+      display: flex;
+   }
+   &__btn-create {
+      font-family: "Orbitron";
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 25px;
+      margin-left: 33px;
+      background: linear-gradient(89.89deg, #42a6e3 2.33%, #ff56f6 101.4%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+   }
+
+   &__btn-explore {
+      background: linear-gradient(92.23deg, #ff56f6 21.43%, #b936ee 50.63%, #3bace2 100%, #406aff 117.04%);
+      border: 2px solid;
+      border-image-source: linear-gradient(272.52deg, #ffa6fa 47.49%, #3c79d5 98.81%);
+      border-image-slice: 2;
+      box-shadow: 0px 2px 57px rgba(255, 86, 246, 0.51);
+      backdrop-filter: blur(113px);
+      clip-path: polygon(18% 0%, 100% 0, 100% 20%, 100% 70%, 85% 100%, 30% 100%, 0 100%, 0% 30%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      max-width: 255px;
+      width: 100%;
+      height: 70px;
+      font-family: "Orbitron";
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 25px;
+      color: $white;
+      background-color: transparent;
+      padding-left: 30px;
+      & img {
+         margin-left: 11px;
+      }
+   }
+   &__statics {
+      margin-top: 69px;
+      display: flex;
+      justify-content: space-between;
+      max-width: 480px;
+      width: 100%;
+      height: 70px;
+   }
+   &__artwork {
+      width: 131px;
+      border-right: 1px solid rgba(255, 255, 255, 0.26);
+   }
+   &__auctions {
+      width: 128px;
+      border-right: 1px solid rgba(255, 255, 255, 0.26);
+   }
+   &__artwork-num,
+   &__auctions-num,
+   &__artists-num {
+      font-family: "Aldrich";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 40px;
+      line-height: 45px;
+      letter-spacing: 0.2px;
+      color: $white;
+   }
+   &__artwork-txt,
+   &__auctions-txt,
+   &__artists-txt {
+      font-family: "Alethia Next";
+      font-weight: 400;
+      font-size: 17px;
+      line-height: 22px;
+      letter-spacing: 0.2px;
+      color: $white;
+   }
+
+   &__partner {
+      display: none;
+   }
+
+   &__image {
+      margin: 120px 0 0 54px;
+      height: 540px;
+      position: relative;
+   }
+   &__img {
+      display: block;
+      padding-right: 90px;
+   }
+   &__user {
+      background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) -1.52%, rgba(255, 255, 255, 0.024) 104.35%);
+      backdrop-filter: blur(60.8003px);
+      border-radius: 8px;
+      clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%, 0 25%);
+      width: 336px;
+      height: 181px;
+      position: absolute;
+      bottom: 0;
+      right: 0px;
+   }
+
+   &__sub-content {
+      display: flex;
+   }
+   &__user-info {
+      margin: 28px 0 0 23px;
+   }
+   &__product-name {
+      font-family: "Rajdhani";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 35px;
+      color: $white;
+   }
+
+   &__user-name,
+   &__currency {
+      display: flex;
+      align-items: center;
+   }
+   &__nickname {
+      font-family: "Rajdhani";
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 35px;
+      color: $white;
+      margin: 0 3px;
+   }
+
+   &__price-title {
+      font-family: "Rajdhani";
+      font-weight: 600;
+      font-size: 11px;
+      // line-height: 35px;
+      color: $white;
+      opacity: 0.7;
+      margin-top: 20px;
+   }
+
+   &__currency {
+      margin-top: 9px;
+      margin-left: -3px;
+   }
+   &__eth {
+      font-family: "Orbitron";
+      font-weight: 700;
+      font-size: 9.71776px;
+      // line-height: 12px;
+      color: $white;
+   }
+   &__dollars,
+   &__auction-title {
+      font-family: "Rajdhani";
+      font-weight: 400;
+      font-size: 11.0546px;
+      // line-height: 35px;
+      margin-left: 5px;
+      color: $white;
+      opacity: 0.7;
+   }
+
+   &__dollars {
+      margin-left: 7px;
+   }
+   &__auction {
+      margin: 42px 0 0 48px;
+   }
+   &__time {
+      display: flex;
+      margin-top: 9px;
+      margin-left: 4px;
+   }
+   &__min {
+      margin-left: 16px;
+      margin-right: 23px;
+   }
+   &__hours-num,
+   &__min-num,
+   &__sec-num {
+      font-family: "Rajdhani";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 17.6873px;
+      // line-height: 35px;
+      color: $white;
+   }
+
+   &__hours-txt,
+   &__min-txt,
+   &__sec-txt {
+      font-family: "Rajdhani";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 11px;
+      // line-height: 35px;
+      color: $white;
+      opacity: 0.7;
+      margin-top: 3px;
+   }
+   &__btn-place {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 30px;
+      font-family: "Rajdhani";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 23px;
+      color: $white;
+      width: 119px;
+      height: 38px;
+      background: linear-gradient(92.23deg, #ff56f6 21.43%, #b936ee 50.63%, #3bace2 100%, #406aff 117.04%);
+      border: 2px solid;
+      border-radius: 4px;
+      border-image-source: linear-gradient(272.52deg, #ffa6fa 47.49%, #3c79d5 98.81%);
+      border-image-slice: 1;
+      box-shadow: 0px 4px 103px 0px #ff56f682;
+      border-radius: 2px;
+      & img {
+         margin-left: 10px;
+      }
+   }
+}
+// * ===== Partners =====
+.partners {
+   margin-top: 102px;
+   &__content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 58px;
+   }
+
+   &__binance {
+      max-width: 265px;
+      width: 100%;
+      & img {
+         width: 100%;
+         height: auto;
+      }
+   }
+
+   &__ethereum {
+      margin: 5px 0px auto 3px;
+      max-width: 170px;
+      width: 100%;
+      & img {
+         width: 100%;
+         height: auto;
+      }
+   }
+   &__blockchain {
+      margin: 4px 0 0 0px;
+      max-width: 330px;
+      width: 100%;
+      & img {
+         width: 100%;
+         height: auto;
+      }
+   }
+   &__bitmex {
+      max-width: 196px;
+      width: 100%;
+      margin: 19px 0px 0 0;
+      & img {
+         width: 100%;
+         height: auto;
+      }
+   }
+}
+// * ===== TopNFT =====
+.topNFT {
+   margin-top: 218px;
+   position: relative;
+   &__top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1374px;
+      width: 100%;
+      height: 33px;
+      margin: 0 0 47px 5px;
+   }
+
+   &__title {
+      font-family: "Orbitron";
+      font-weight: 700;
+      font-size: 27px;
+      line-height: 33px;
+      color: $white;
+   }
+   &__btn {
+      display: flex;
+      align-items: center;
+      background-color: transparent;
+      font-family: "Orbitron";
+      font-weight: 700;
+      font-size: 27px;
+      line-height: 33px;
+      color: $white;
+      width: 192px;
+      & img {
+         margin-left: 15px;
+      }
+   }
+
+   &__wrapper {
+      display: flex;
+      justify-content: space-between;
+      margin-left: 7px;
+   }
+   // * ===== Slide-1 =====
+   &__slide-1 {
+      max-width: 437px !important;
+      width: 100%;
+      height: 635px;
+   }
+   &__apollo-info {
+      margin: 44px 0 0 27px;
+   }
+   &__apollo-product {
+      font-family: "Rajdhani";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 23px;
+      color: $white;
+      max-width: 200px;
+      width: 100%;
+      height: 29px;
+   }
+   &__apollo-nickname {
+      margin-left: 4px;
+   }
+   &__apollo-auction {
+      margin: 48px 0 0 22px;
+   }
+
+   // * ===== Slide-2 =====
+   &__slide-2 {
+      max-width: 437px !important;
+      width: 100%;
+      height: 635px;
+      margin: 0 35px;
+   }
+   &__syssy-product {
+      font-family: "Rajdhani";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 23px;
+      color: $white;
+      max-width: 191px;
+      width: 100%;
+      height: 29px;
+   }
+   &__syssy-info {
+      margin: 44px 0 0 24px;
+   }
+   &__syssy-nickname {
+      margin-left: 5px;
+   }
+   &__syssy-auction {
+      margin: 48px 0 0 30px;
+   }
+
+   // * ===== Slide-3 =====
+   &__slide-3 {
+      max-width: 437px !important;
+      width: 100%;
+      height: 635px;
+      margin-right: 10px;
+   }
+   &__satisfying,
+   &__syssy,
+   &__apollo {
+      display: flex;
+      background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) -1.52%, rgba(255, 255, 255, 0.024) 104.35%);
+      // backdrop-filter: blur(39.6002px);
+      border: solid 2px rgba(255, 255, 255, 0.3);
+      max-width: 437px;
+      width: 100%;
+   }
+   &__satisfying-info {
+      margin: 44px 0 0 27px;
+   }
+   &__satisfying-product {
+      font-family: "Rajdhani";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 23px;
+      color: $white;
+      max-width: 161px;
+      width: 100%;
+      height: 29px;
+   }
+   &__satisfying-name,
+   &__syssy-name,
+   &__apollo-name {
+      display: flex;
+      margin-top: 8px;
+   }
+   &__satisfying-avatar {
+      display: block;
+      margin-right: 4px;
+   }
+   &__satisfying-mark,
+   &__syssy-mark,
+   &__apollo-mark {
+      display: block;
+      margin-left: 4px;
+   }
+
+   &__satisfying-nickname,
+   &__syssy-nickname,
+   &__apollo-nickname {
+      height: 26px;
+      max-width: 96px;
+      width: 100%;
+      font-family: "Rajdhani";
+      font-weight: 600;
+      font-size: 20px;
+      color: $white;
+      margin-top: 9px;
+   }
+   &__satisfying-price,
+   &__syssy-price,
+   &__apollo-price {
+      margin-top: 28px;
+   }
+
+   &__satisfying-price-title,
+   &__syssy-price-title,
+   &__apollo-price-title {
+      height: 18px;
+      max-width: 79px;
+      width: 100%;
+      font-family: "Rajdhani";
+      font-weight: 600;
+      font-size: 14px;
+      color: $white;
+      opacity: 0.7;
+      margin-bottom: 10px;
+   }
+
+   &__satisfying-currency,
+   &__syssy-currency,
+   &__apollo-currency {
+      display: flex;
+      align-items: center;
+   }
+   &__satisfying-eth,
+   &__syssy-eth,
+   &__apollo-eth {
+      height: 16px;
+      max-width: 65px;
+      width: 100%;
+      font-family: "Orbitron";
+      font-weight: 700;
+      font-size: 13px;
+      color: $white;
+      margin-left: 7px;
+      margin-top: 3px;
+   }
+
+   &__satisfying-dollars,
+   &__syssy-dollars,
+   &__apollo-dollars {
+      height: 18px;
+      max-width: 62px;
+      width: 100%;
+      color: $white;
+      opacity: 0.7;
+      font-family: "Rajdhani";
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 18px;
+      margin-left: 6px;
+   }
+   &__satisfying-auction {
+      margin: 48px 0 0 62px;
+   }
+   &__satisfying-auction-title,
+   &__syssy-auction-title,
+   &__apollo-auction-title {
+      height: 18px;
+      max-width: 91px;
+      width: 100%;
+      font-family: "Rajdhani";
+      font-weight: 600;
+      font-size: 14px;
+      color: $white;
+      opacity: 0.7;
+      margin-left: 15px;
+   }
+
+   &__satisfying-time,
+   &__syssy-time,
+   &__apollo-time {
+      display: flex;
+   }
+   &__satisfying-hours-num,
+   &__satisfying-min-num,
+   &__satisfying-sec-num,
+   &__syssy-hours-num,
+   &__syssy-min-num,
+   &__syssy-sec-num,
+   &__apollo-hours-num,
+   &__apollo-min-num,
+   &__apollo-sec-num {
+      max-width: 23px;
+      width: 100%;
+      height: 27px;
+      font-family: "Rajdhani";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 23px;
+      color: $white;
+   }
+
+   &__satisfying-hours-txt,
+   &__satisfying-min-txt,
+   &__satisfying-sec-txt,
+   &__syssy-hours-txt,
+   &__syssy-min-txt,
+   &__syssy-sec-txt,
+   &__apollo-min-txt,
+   &__apollo-hours-txt,
+   &__apollo-sec-txt {
+      color: $white;
+      opacity: 0.7;
+      max-width: 34px;
+      width: 100%;
+      height: 18px;
+      font-family: "Rajdhani";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+   }
+   &__satisfying-hours,
+   &__syssy-hours,
+   &__apollo-hours {
+      margin: 7px 0 0 14px;
+   }
+   &__satisfying-min,
+   &__syssy-min,
+   &__apollo-min {
+      margin: 7px 30px 0 22px;
+   }
+   &__satisfying-sec,
+   &__syssy-sec,
+   &__apollo-sec {
+      margin-top: 7px;
+   }
+   &__satisfying-btn,
+   &__syssy-btn,
+   &__apollo-btn {
+      background: linear-gradient(92.23deg, #ff56f6 21.43%, #b936ee 50.63%, #3bace2 100%, #406aff 117.04%);
+      border: 2.13px solid;
+      border-radius: 4.13158px;
+      border-image-source: linear-gradient(272.52deg, #ffa6fa 47.49%, #3c79d5 98.81%);
+      border-image-slice: 1;
+      box-shadow: 0px 4.263157844543457px 103.38158416748047px 0px #ff56f682;
+      border-radius: 2.21092px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: "Rajdhani";
+      font-weight: 600;
+      font-size: 23.0401px;
+      line-height: 29px;
+      color: $white;
+      width: 155px;
+      height: 49px;
+      margin-top: 35px;
+      margin-bottom: 26px;
+      padding-left: 5px;
+      & img {
+         margin-left: 12px;
+      }
+   }
+
+   &__btn-explore {
+      display: none;
+      & button {
+         background-image: url(../img/Explorebtn.svg);
+         background-repeat: no-repeat;
+         background-position: center;
+         width: 140px;
+         height: 40px;
+         background-color: transparent;
+         font-family: "Orbitron";
+         font-style: normal;
+         font-weight: 700;
+         font-size: 12px;
+         line-height: 15px;
+         color: $white;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         & img {
+            margin-left: 5px;
+         }
+      }
+   }
+}
+// * ===== Collections =====
+.collections {
+   margin-top: 150px;
+   &__content {
+      // min-height: 815px;
+      display: flex;
+      margin-left: 8px;
+   }
+   &__title {
+      font-family: "Orbitron";
+      font-weight: 700;
+      font-size: 27px;
+      line-height: 33px;
+      color: $white;
+      margin: 43px 0;
+   }
+   &__btns {
+      display: flex;
+   }
+   &__left {
+      margin-right: 44px;
+   }
+   &__lft-btn {
+      display: block;
+      border: 2px solid;
+      border-image-source: linear-gradient(272.52deg, rgba(255, 166, 250, 0.3) 47.49%, rgba(60, 121, 213, 0.3) 98.81%);
+      border-image-slice: 1;
+      background-color: transparent;
+      font-family: "Orbitron";
+      font-weight: 700;
+      font-size: 27px;
+      line-height: 33px;
+      text-align: center;
+      color: rgba(255, 255, 255, 0.5);
+      width: 368px;
+      // width: 100%;
+      height: 99px;
+      margin-bottom: 43px;
+
+      &:hover {
+         background: linear-gradient(92.23deg, #ff56f6 21.43%, #b936ee 50.63%, #3bace2 100%, #406aff 117.04%);
+         box-shadow: 0px 4.42184px 107.23px rgba(255, 86, 246, 0.51);
+      }
+
+      &:active {
+         background: linear-gradient(92.23deg, #ff56f6 21.43%, #b936ee 50.63%, #3bace2 100%, #406aff 117.04%);
+         box-shadow: 0px 4.42184px 107.23px rgba(255, 86, 246, 0.51);
+      }
+   }
+
+   &__right-btn {
+      display: block;
+      border: 2px solid;
+      border-image-source: linear-gradient(272.52deg, rgba(255, 166, 250, 0.3) 47.49%, rgba(60, 121, 213, 0.3) 98.81%);
+      border-image-slice: 1;
+      background-color: transparent;
+      font-family: "Orbitron";
+      font-weight: 700;
+      font-size: 27px;
+      line-height: 33px;
+      text-align: center;
+      color: rgba(255, 255, 255, 0.5);
+      width: 368px;
+      height: 99px;
+      margin-bottom: 43px;
+      &:hover {
+         background: linear-gradient(92.23deg, #ff56f6 21.43%, #b936ee 50.63%, #3bace2 100%, #406aff 117.04%);
+         box-shadow: 0px 4.42184px 107.23px rgba(255, 86, 246, 0.51);
+      }
+      &:active {
+         background: linear-gradient(92.23deg, #ff56f6 21.43%, #b936ee 50.63%, #3bace2 100%, #406aff 117.04%);
+         box-shadow: 0px 4.42184px 107.23px rgba(255, 86, 246, 0.51);
+      }
+      &:nth-child(4) {
+         margin: 0;
+      }
+   }
+
+   &__view {
+      margin-top: 43px;
+      display: flex;
+      align-items: center;
+      font-family: "Orbitron";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 25px;
+      color: $white;
+      background-color: transparent;
+      margin-left: 205px;
+      & img {
+         margin-left: 15px;
+      }
+   }
+
+   &__image {
+      height: 815px;
+      margin-left: 130px;
+      max-width: 100%;
+      width: 100%;
+
+      & img {
+         max-width: 100%;
+         max-height: 100%;
+      }
+   }
+   &__second-img {
+      display: none;
+   }
+}
+// * ===== Account =====
+.account {
+   margin-top: 150px;
+   &__content {
+      // height: 645px;
+      margin-left: 5px;
+   }
+   &__top {
+      display: flex;
+      justify-content: space-between;
+   }
+
+   &__title {
+      font-family: "Orbitron";
+      font-weight: 700;
+      font-size: 26.531px;
+      line-height: 33px;
+      margin-bottom: 47px;
+      color: $white;
+   }
+   &__btn {
+      display: block;
+      background-color: transparent;
+      font-family: "Orbitron";
+      font-weight: 700;
+      font-size: 26.531px;
+      line-height: 33px;
+      color: $white;
+      height: 33px;
+      margin-right: 5px;
+      & img {
+         margin-left: 12px;
+      }
+   }
+   &__wrapper {
+      display: flex;
+   }
+   &__slide-2 {
+      margin-left: 35px;
+   }
+   &__slide-3 {
+      margin: 0 35px;
+   }
+   &__slide-1,
+   &__slide-2,
+   &__slide-3 {
+      max-width: 438px !important;
+      width: 100%;
+      height: 565px;
+      background-image: url(../img/first.png);
+      background-repeat: no-repeat;
+      position: relative;
+   }
+   &__first {
+      margin: 3px;
+   }
+   &__avatar {
+      position: absolute;
+      top: 101px;
+      left: 135px;
+   }
+   &__name {
+      margin-top: 10px;
+      text-align: center;
+      font-family: "Rajdhani";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 31px;
+      margin-bottom: 3px;
+      color: $white;
+   }
+
+   &__nickname {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: "Rajdhani";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20.1601px;
+      line-height: 26px;
+      text-align: center;
+      color: #ffb1ee;
+      margin-left: 20px;
+      & img {
+         margin-left: 5px;
+      }
+   }
+
+   &__info {
+      position: absolute;
+      bottom: 43px;
+   }
+   &__info-user {
+      width: 348px;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 40px;
+      margin-left: 42px;
+   }
+   &__folowers,
+   &__artworks {
+      width: 72px;
+      text-align: center;
+   }
+   &__following {
+      width: 76px;
+      text-align: center;
+   }
+   &__folowers-num,
+   &__following-num,
+   &__artworks-num {
+      font-family: "Rajdhani";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 31px;
+      line-height: 40px;
+      color: $white;
+   }
+   &__folowers-txt,
+   &__following-txt,
+   &__artworks-txt {
+      font-family: "Rajdhani";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 19.8061px;
+      line-height: 25px;
+      color: $white;
+      opacity: 0.7;
+   }
+
+   &__btn-follow {
+      display: block;
+      margin-left: 100px;
+      font-family: "Rajdhani";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 25px;
+      background: linear-gradient(92.23deg, #ff56f6 21.43%, #b936ee 50.63%, #3bace2 100%, #406aff 117.04%);
+      border: 2px solid;
+      border-image-source: linear-gradient(272.52deg, #ffa6fa 47.49%, #3c79d5 98.81%);
+      border-image-slice: 1;
+      box-shadow: 0px 3.33558px 80.8879px rgba(255, 86, 246, 0.51);
+      backdrop-filter: blur(160.108px);
+      color: $white;
+      width: 240px;
+      height: 55px;
+   }
+   &__btn-explore {
+      display: none;
+      & button {
+         background-image: url(../img/Explorebtn.svg);
+         background-repeat: no-repeat;
+         background-position: center;
+         width: 140px;
+         height: 40px;
+         background-color: transparent;
+         font-family: "Orbitron";
+         font-style: normal;
+         font-weight: 700;
+         font-size: 12px;
+         line-height: 15px;
+         color: $white;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         & img {
+            margin-left: 5px;
+         }
+      }
+   }
+}
+// * ===== Sellers =====
+.sellers {
+   margin-top: 160px;
+   &__top-info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-left: 25px;
+   }
+   &__title {
+      display: flex;
+      align-items: center;
+      font-family: "Orbitron";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 27px;
+      line-height: 33px;
+      color: $white;
+      margin-bottom: 20px;
+
+      & span {
+         margin-left: 5px;
+         color: #ff56f6;
+      }
+
+      & img {
+         margin-left: 5px;
+      }
+   }
+
+   &__sub-title {
+      max-width: 506px;
+      width: 100%;
+      height: 70px;
+      font-family: "Roboto";
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 25px;
+      text-align: center;
+      color: $white;
+      margin-bottom: 39px;
+   }
+
+   &__wrapper {
+      display: flex;
+      margin-left: 5px;
+   }
+   &__slide-1,
+   &__slide-2,
+   &__slide-3 {
+      max-width: 437px !important;
+      width: 100%;
+   }
+
+   &__slide-2 {
+      margin: 0 35px;
+   }
+
+   &__eleanor,
+   &__esther,
+   &__jacob,
+   &__jane,
+   &__savannah,
+   &__robert,
+   &__jerome,
+   &__kristin,
+   &__arlene,
+   &__darlene,
+   &__wade,
+   &__kathryn {
+      display: flex;
+      align-items: center;
+      border: 2px solid $gray;
+      backdrop-filter: blur(37.9079px);
+      max-width: 437px;
+      width: 100%;
+      height: 124px;
+      border-radius: 29px;
+      margin-bottom: 35px;
+      position: relative;
+      &:last-child {
+         margin: 0;
+      }
+   }
+
+   &__number {
+      font-family: "Roboto";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 19px;
+      line-height: 44px;
+      margin-left: 30px;
+      color: rgba(255, 255, 255, 0.8);
+   }
+
+   &__avatar {
+      margin: 0 13px 0 17px;
+   }
+
+   &__info {
+   }
+
+   &__name {
+      font-family: "Roboto";
+      font-weight: 500;
+      font-size: 19px;
+      line-height: 22px;
+      color: $white;
+      margin-bottom: 14px;
+   }
+
+   &__money {
+      font-family: "Roboto";
+      font-weight: 500;
+      font-size: 13px;
+      line-height: 16px;
+      color: rgba(255, 255, 255, 0.8);
+      & img {
+         margin-right: 5px;
+      }
+   }
+
+   &__wallet {
+      border: 1px solid rgba(0, 179, 71, 0.72);
+      background: rgba(0, 179, 71, 0.15);
+      border-radius: 18px;
+      width: 100px;
+      height: 35px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      right: 20px;
+      & p {
+         font-family: "Roboto";
+         font-style: normal;
+         font-weight: 500;
+         font-size: 15px;
+         line-height: 17px;
+         color: #00ff66;
+      }
+   }
+
+   &__red {
+      border: 1px solid rgba(178, 0, 0, 0.72);
+      background: linear-gradient(180deg, rgba(235, 20, 20, 0.15) 0%, rgba(235, 20, 20, 0.1005) 100%);
+      width: 100px;
+      height: 35px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      & p {
+         font-family: "Roboto";
+         font-style: normal;
+         font-weight: 500;
+         font-size: 15px;
+         line-height: 17px;
+         color: #ff0000;
+      }
+   }
+   &__munber2 {
+      margin-left: 21px;
+   }
+   &__btn {
+      text-align: center;
+      margin-left: 10px;
+   }
+
+   &__btn-explore {
+      border: 2px solid;
+      border-image-source: linear-gradient(272.52deg, rgba(255, 166, 250, 0.3) 47.49%, rgba(60, 121, 213, 0.3) 98.81%);
+      border-image-slice: 1;
+      background: linear-gradient(92.23deg, #ff56f6 21.43%, #b936ee 50.63%, #3bace2 100%, #406aff 117.04%);
+      box-shadow: 0px 4.81747px 116.824px rgba(255, 86, 246, 0.51);
+      backdrop-filter: blur(115.619px);
+      color: $white;
+      font-family: "Rajdhani";
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 25px;
+      width: 235px;
+      height: 50px;
+      margin-top: 55px;
+   }
+}
+// * ===== nft =====
+.nft {
+   margin-top: 160px;
+   background-image: url(../img/bg.png);
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
+   height: 556px;
+
+   &__container {
+      height: 690px;
+      position: relative;
+   }
+
+   &__content {
+      position: absolute;
+      bottom: 0;
+      right: 50px;
+      width: 577px;
+      height: 473px;
+      border: 2px solid;
+      border-image-source: linear-gradient(113.62deg, #616161 0%, rgba(255, 255, 255, 0) 96.25%);
+      border-image-slice: 1;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(84.6282px);
+   }
+
+   &__title {
+      font-family: "Inter";
+      font-weight: 800;
+      font-size: 45px;
+      line-height: 60px;
+      color: $white;
+      margin: 61px 0 18px 70px;
+      font-feature-settings: "salt" on, "liga" off;
+   }
+
+   &__txt {
+      max-width: 458px;
+      width: 100%;
+      height: 214px;
+      font-family: "Inter";
+      font-feature-settings: "salt" on, "liga" off;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 36px;
+      margin-left: 70px;
+      margin-bottom: 45px;
+      color: $white;
+   }
+
+   &__btn {
+      margin-left: 70px;
+      background-color: transparent;
+      font-family: "Inter";
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 27px;
+      font-feature-settings: "salt" on, "liga" off;
+      color: $white;
+      &:last-child {
+         margin-left: 40px;
+      }
+      & img {
+         margin-top: 5px;
+      }
+   }
+}
+// * ===== subscribe =====
+.subscribe {
+   margin-top: 297px;
+
+   &__content {
+      display: flex;
+   }
+   &__img {
+      max-width: 698px;
+      width: 100%;
+      & img {
+         width: 100%;
+         height: auto;
+      }
+   }
+
+   &__title {
+      font-family: "Orbitron";
+      font-weight: 700;
+      font-size: 40px;
+      line-height: 50px;
+      font-feature-settings: "salt" on, "liga" off;
+      color: $white;
+      margin: 32px 0 28px 0;
+   }
+
+   &__txt {
+      max-width: 495px;
+      width: 100%;
+      height: 70px;
+      font-family: "Inter";
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 35px;
+      font-feature-settings: "salt" on, "liga" off;
+      color: $white;
+      margin-bottom: 50px;
+   }
+   &__info {
+      margin-left: 80px;
+   }
+
+   &__email {
+      width: 275px;
+      height: 54px;
+      background: #f4f5f7;
+      border-radius: 6px 0px 0px 6px;
+      padding-left: 17px;
+      &::placeholder {
+         font-family: "Inter";
+         font-style: normal;
+         font-weight: 400;
+         font-size: 15px;
+         line-height: 27px;
+         font-feature-settings: "salt" on, "liga" off;
+         color: #474a57;
+      }
+   }
+
+   &__submit {
+      height: 53px;
+      width: 145px;
+      border: 2px solid;
+      border-image-source: linear-gradient(272.52deg, rgba(255, 166, 250, 0.3) 47.49%, rgba(60, 121, 213, 0.3) 98.81%);
+      border-image-slice: 1;
+      background-color: transparent;
+      background: linear-gradient(92.23deg, #ff56f6 21.43%, #b936ee 50.63%, #3bace2 100%, #406aff 117.04%);
+      box-shadow: 0px 4.81747px 116.824px rgba(255, 86, 246, 0.51);
+      backdrop-filter: blur(115.619px);
+      border-radius: 0px 6px 6px 0px;
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 22px;
+      font-feature-settings: "salt" on, "liga" off;
+      color: $white;
+   }
+}
+// * ===== Info =====
+.info {
+   margin-top: 160px;
+   &__content {
+      border-top: 1px solid #4e3f69;
+      display: flex;
+   }
+
+   &__btn {
+      display: none;
+      cursor: pointer;
+   }
+   &__item {
+      display: flex;
+      justify-content: space-between;
+      max-width: 1015px;
+      width: 100%;
+      margin: 100px 0 0 90px;
+   }
+
+   &__logo {
+      margin-top: 100px;
+   }
+
+   &__market,
+   &__collectibles,
+   &__support,
+   &__legal,
+   &__follow {
+      position: relative;
+   }
+   &__logo-logo {
+      margin-bottom: 30px;
+      & a {
+         font-family: "Orbitron";
+         font-weight: 700;
+         font-size: 20px;
+         line-height: 25px;
+         color: $gray;
+         margin-top: 3px;
+         & span {
+            color: $white;
+         }
+      }
+   }
+
+   &__logo-txt {
+      max-width: 282px;
+      width: 100%;
+      height: 106px;
+      font-family: "Inter";
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 27px;
+      font-feature-settings: "salt" on, "liga" off;
+      color: #d9dbe1;
+      margin-bottom: 45px;
+   }
+   &__messenger {
+      display: flex;
+      justify-content: space-between;
+      max-width: 160px;
+      width: 100%;
+      height: 27px;
+   }
+
+   &__follow {
+      margin-right: 0;
+   }
+   &__market,
+   &__collectibles,
+   &__support,
+   &__legal,
+   &__follow {
+      max-width: 177px;
+      margin-right: 33px;
+      width: 100%;
+      transition: 1s;
+   }
+   &__market-title {
+      font-family: "Inter";
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 31px;
+      font-feature-settings: "salt" on, "liga" off;
+      color: $white;
+      margin-bottom: 18px;
+      &:last-child{
+         margin: 0;
+      }
+   }
+   &__market-item {
+      margin-bottom: 13px;
+      &:last-child {
+         margin: 0;
+      }
+   }
+
+   &__market-link {
+      font-family: "Inter";
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 27px;
+      font-feature-settings: "salt" on, "liga" off;
+      color: #d9dbe1;
+      & span {
+         font-family: "MuseoModerno";
+         font-style: normal;
+         font-weight: 400;
+         font-size: 22.1092px;
+         line-height: 27px;
+         color: #2ec5ce;
+         margin-left: 9px;
+      }
+   }
+}
+
+.footer {
+   margin-top: 86px;
+   &__content {
+      border-top: 1px solid #4e3f69;
+      display: flex;
+      justify-content: space-between;
+   }
+   &__name {
+      max-width: 303px;
+      width: 100%;
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 15.4764px;
+      line-height: 27px;
+      font-feature-settings: "salt" on, "liga" off;
+      color: #d9dbe1;
+      margin-top: 27px;
+      margin-bottom: 40px;
+   }
+   &__dev {
+      display: flex;
+      margin-top: 27px;
+      margin-bottom: 40px;
+   }
+
+   &__terms,
+   &__private,
+   &__sitemap {
+      font-family: "Inter";
+      font-weight: 400;
+      font-size: 15.4764px;
+      line-height: 27px;
+      font-feature-settings: "salt" on, "liga" off;
+      color: #d9dbe1;
+      margin: 0 8px;
+   }
+   &__private {
+      padding: 0 8px;
+      border-left: 1px solid #d9dbe1;
+      border-right: 1px solid #d9dbe1;
+   }
+}
+// * ===== Mobile =====
+// ! ===== 1335px =====
+@media (max-width: 1335px) {
+   .discover {
+      &__title {
+         margin-bottom: 100px;
+      }
+   }
+   .collections {
+      &__image {
+         margin-left: 80px;
+      }
+   }
+}
+// ! ===== 1280px =====
+@media (max-width: 1280px) {
+   .collections {
+      &__image {
+         margin-left: 60px;
+      }
+   }
+   .subscribe {
+      &__content {
+         display: flex;
+         flex-direction: column-reverse;
+         justify-content: center;
+         align-items: center;
+      }
+      &__img {
+         margin-top: 108px;
+      }
+      &__info {
+         text-align: center;
+         margin: 0 auto;
+      }
+   }
+   .info {
+      &__item {
+         margin-left: 40px;
+      }
+   }
+}
+// ! ===== 1160px =====
+@media (max-width: 1160px) {
+   .collections {
+      &__image {
+         margin: 70px 0 0 50px;
+      }
+   }
+   .info {
+      &__logo-txt {
+         width: 250px;
+         height: 106px;
+      }
+      &__market,
+      &__collectibles,
+      &__support,
+      &__legal,
+      &__follow {
+         max-width: 177px;
+         margin-right: 25px;
+         width: 100%;
+      }
+   }
+}
+// ! ===== 1127px =====
+@media (max-width: 1127px) {
+   .header {
+      &__menu {
+         margin: 0 auto 0 180px;
+      }
+   }
+   .discover {
+      &__title {
+         margin-bottom: 190px;
+      }
+      &__text {
+         margin-bottom: 80px;
+      }
+   }
+   .collections {
+      &__content {
+         display: block;
+      }
+
+      &__btns {
+         display: flex;
+         justify-content: center;
+      }
+
+      &__image {
+         margin: 0;
+         display: flex;
+         justify-content: center;
+      }
+   }
+}
+// ! ===== 1100px =====
+@media (max-width: 1100px) {
+   .partners {
+      &__binance {
+         max-width: 265px;
+         width: 100%;
+         & img {
+            width: 100%;
+            height: auto;
+         }
+      }
+
+      &__ethereum {
+         margin: 5px 30px 0 30px;
+         max-width: 170px;
+         width: 100%;
+         & img {
+            width: 100%;
+            height: auto;
+         }
+      }
+      &__blockchain {
+         margin: 4px 0px 0 0px;
+         max-width: 330px;
+         width: 100%;
+         & img {
+            width: 100%;
+            height: auto;
+         }
+      }
+      &__bitmex {
+         max-width: 196px;
+         width: 100%;
+         margin: 10px 0px 0 30px;
+         & img {
+            width: 100%;
+            height: auto;
+         }
+      }
+   }
+   .info {
+      &__item {
+         margin-left: 10px;
+      }
+      &__logo-txt {
+         width: 220px;
+         height: 106px;
+      }
+      &__market,
+      &__collectibles,
+      &__support,
+      &__legal,
+      &__follow {
+         margin-right: 20px;
+      }
+   }
+}
+
+// ! ===== 1020px =====
+@media (max-width: 1020px) {
+   .header {
+      &__menu {
+         margin: 0 auto 0 130px;
+      }
+   }
+
+   .discover {
+      &__content {
+         flex-wrap: wrap;
+         justify-content: center;
+      }
+      &__title {
+         margin-bottom: 23px;
+      }
+      &__text {
+         margin-bottom: 40px;
+      }
+   }
+   .info {
+      &__item {
+         margin-left: 15px;
+      }
+      &__logo-txt {
+         width: 200px;
+         height: 106px;
+      }
+      &__market,
+      &__collectibles,
+      &__support,
+      &__legal,
+      &__follow {
+         max-width: 177px;
+         margin-right: 15px;
+         width: 100%;
+      }
+   }
+}
+// ! ===== 992px =====
+@media (max-width: 992px) {
+   .header {
+      &__menu {
+         margin: 0 auto 0 90px;
+      }
+   }
+   .discover {
+      &__title {
+         font-size: 58px;
+         max-width: 848px;
+         width: 100%;
+      }
+      &__artwork-num,
+      &__auctions-num,
+      &__artists-num {
+         font-size: 32px;
+      }
+   }
+   .collections {
+      &__title {
+         margin: 30px 0;
+         font-size: 22px;
+         line-height: 28px;
+      }
+      &__left {
+         margin-right: 30px;
+      }
+      &__lft-btn,
+      &__right-btn {
+         width: 260px;
+         height: 70px;
+         font-size: 19px;
+         line-height: 24px;
+         margin-bottom: 30px;
+      }
+
+      &__view {
+         margin-top: 30px;
+         margin-left: 100px;
+      }
+   }
+   .subscribe {
+      &__title {
+         font-size: 32px;
+         line-height: 50px;
+      }
+      &__email {
+         width: 275px;
+         height: 44px;
+      }
+      &__submit {
+         height: 44px;
+      }
+   }
+   .info {
+      &__btn {
+         display: block;
+         position: absolute;
+         top: 10px;
+         right: 5px;
+      }
+      &__item {
+         margin-left: 90px;
+         flex-direction: column;
+      }
+      &__logo-txt {
+         width: 282px;
+      }
+
+      &__market,
+      &__collectibles,
+      &__support,
+      &__legal,
+      &__follow {
+         max-width: 500px;
+         width: 100%;
+         border-bottom: 1px solid #4e3f69;
+         margin-bottom: 16px;
+         &:last-child {
+            border: none;
+         }
+      }
+   }
+}
+// ! ===== 900px =====
+@media (max-width: 900px) {
+   .header {
+      &__menu {
+         width: 400px;
+         margin: 0 auto 0 50px;
+      }
+   }
+}
+
+// ! ===== 768px =====
+@media (max-width: 768px) {
+   .header {
+      &__menu-icon {
+         position: absolute;
+         right: 30px;
+         top: 5px;
+         cursor: pointer;
+         width: 40px;
+         height: 20px;
+         z-index: 30;
+         &::before,
+         &::after {
+            position: absolute;
+            right: 0;
+            height: 2px;
+            width: 100%;
+            transition: all 0.3s ease 0s;
+            background-color: #fff;
+         }
+         & span,
+         &::before,
+         &::after {
+            position: absolute;
+            right: 0;
+            height: 2px;
+            width: 20px;
+            transition: all 0.3s ease 0s;
+            background-color: $white;
+         }
+         &::before,
+         &::after {
+            width: 20px;
+            content: "";
+         }
+         &::before {
+            top: 0;
+         }
+         &::after {
+            bottom: 0;
+         }
+         & span {
+            width: 15px;
+            top: 50%;
+            transform: scale(1) translate(0px, -50%);
+         }
+         &._active span {
+            transform: scale(0) translate(0px, -50%);
+         }
+         &._active::before {
+            top: 50%;
+            transform: rotate(-45deg) translate(0px, -50%);
+         }
+         &._active::after {
+            bottom: 50%;
+            transform: rotate(45deg) translate(0px, 50%);
+         }
+      }
+      &__menu-body {
+         display: block;
+         position: fixed;
+         top: 0px;
+         right: -100%;
+         width: 320px;
+         height: 100%;
+         padding: 80px 0 0 0;
+         background: rgba(32, 8, 59, 1);
+         transition: left 0.3s ease 0s;
+         overflow: auto;
+         z-index: 20;
+         &._active {
+            right: 0;
+         }
+         &::before {
+            content: "";
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 16;
+         }
+      }
+      &__menu-list,
+      &__menu-item {
+         flex-wrap: wrap;
+      }
+      &__menu-item {
+         padding: 0px 0 30px 30px;
+      }
+
+      &__menu-list,
+      &__menu-item,
+      &._active {
+         display: block;
+      }
+      &__menu {
+         width: 0;
+      }
+      &__users {
+         display: none;
+      }
+      &__menu-users {
+         display: none;
+      }
+      &__menu-users {
+         display: block;
+      }
+      &__menu-item {
+         display: flex;
+         align-items: center;
+      }
+      &__menu-user {
+         margin-left: 30px;
+      }
+   }
+   .discover {
+      &__title {
+         font-size: 50px;
+         max-width: 848px;
+         width: 100%;
+      }
+      &__artwork-num,
+      &__auctions-num,
+      &__artists-num {
+         font-size: 24px;
+      }
+      &__statics {
+         margin-top: 40px;
+      }
+      &__partner {
+         display: block;
+         max-width: 768px;
+         width: 100%;
+         margin-top: 40px;
+      }
+      &__item {
+         display: flex;
+         align-items: center;
+      }
+      &__fist-row,
+      &__second-row {
+         width: 50%;
+         display: flex;
+         justify-content: space-around;
+         align-items: center;
+      }
+      &__binance {
+         margin: 0 20px 0 0;
+         max-width: 143px;
+         width: 100%;
+         height: 29px;
+         & img {
+            width: 100%;
+         }
+      }
+
+      &__ethereum {
+         margin: 0;
+         max-width: 92px;
+         width: 100%;
+         height: 29px;
+         & img {
+            width: 100%;
+         }
+      }
+
+      &__blockchain {
+         margin: 0 20px 0 0;
+         max-width: 188px;
+         width: 100%;
+         height: 29px;
+         & img {
+            width: 100%;
+         }
+      }
+      &__bitmex {
+         max-width: 106px;
+         width: 100%;
+         margin: 0;
+         & img {
+            width: 100%;
+         }
+      }
+
+      &__image {
+         margin: 40px 0 0 0;
+      }
+   }
+   .partners {
+      display: none;
+   }
+   .topNFT {
+      margin-top: 150px;
+      &__title,
+      &__btn {
+         font-size: 21px;
+         line-height: 26px;
+      }
+   }
+
+   .account {
+      &__title,
+      &__btn {
+         font-size: 21px;
+         line-height: 26px;
+      }
+   }
+
+   .sellers {
+      &__title {
+         font-size: 19px;
+         line-height: 24px;
+         margin-bottom: 17px;
+      }
+
+      &__sub-title {
+         max-width: 325px;
+         width: 100%;
+         height: 50px;
+         font-size: 14px;
+         line-height: 16px;
+      }
+
+      &__slide-1,
+      &__slide-2,
+      &__slide-3 {
+         max-width: 377px !important;
+         width: 100%;
+      }
+      &__eleanor,
+      &__esther,
+      &__jacob,
+      &__jane,
+      &__savannah,
+      &__robert,
+      &__jerome,
+      &__kristin,
+      &__arlene,
+      &__darlene,
+      &__wade,
+      &__kathryn {
+         display: flex;
+         align-items: center;
+         border: 2px solid $gray;
+         backdrop-filter: blur(37.9079px);
+         height: 115px;
+         border-radius: 29px;
+         margin-bottom: 35px;
+         position: relative;
+         &:last-child {
+            margin: 0;
+         }
+      }
+      &__number {
+         font-size: 14px;
+         line-height: 16px;
+         margin-left: 15px;
+      }
+
+      &__avatar {
+         margin: 0 13px 0 17px;
+         width: 50px;
+         height: 50px;
+      }
+
+      &__name {
+         font-size: 13px;
+         line-height: 32px;
+         margin-bottom: 11px;
+      }
+      &__money {
+         font-family: "Roboto";
+         font-weight: 500;
+         font-size: 10px;
+         line-height: 12px;
+         & img {
+            margin-right: 3px;
+         }
+      }
+      &__wallet {
+         width: 86px;
+         height: 30px;
+         & p {
+            font-size: 13px;
+            line-height: 34px;
+            color: #00ff66;
+         }
+      }
+
+      &__red {
+         width: 86px;
+         height: 30px;
+
+         & p {
+            font-size: 13px;
+            line-height: 34px;
+            color: #ff0000;
+         }
+      }
+   }
+
+   .nft {
+      height: 467px;
+
+      &__container {
+         height: 544px;
+      }
+      &__content {
+         width: 456px;
+         height: 374px;
+         right: 40px;
+      }
+      &__title {
+         font-size: 35px;
+         margin: 33px 0 9px 55px;
+      }
+      &__txt {
+         font-size: 15px;
+         margin-left: 55px;
+         max-width: 360px;
+         width: 100%;
+         margin-bottom: 15px;
+      }
+      &__btn {
+         font-size: 14px;
+         & img {
+            margin-top: 9px;
+            width: 7px;
+            height: 10px;
+         }
+      }
+   }
+   .info {
+      &__content {
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+      }
+      &__item {
+         max-width: 735px;
+         width: 100%;
+         justify-content: center;
+         align-items: center;
+         margin: 50px 0 0 0;
+      }
+      &__market,
+      &__collectibles,
+      &__support,
+      &__legal,
+      &__follow {
+         margin: 0;
+         margin-top: 18px;
+      }
+   }
+
+   .footer {
+
+      &__dev {
+         width: 296px;
+      }
+      &__sitemap {
+         display: none;
+      }
+      &__private {
+         border: none;
+      }
+   }
+}
+// ! ===== 645px =====
+@media (max-width: 645px) {
+   .footer {
+      margin-top: 23px;
+      &__content {
+         border: none;
+         flex-direction: column-reverse;
+         align-items: center;
+      }
+      &__dev{
+         margin: 0;
+      }
+
+      &__name {
+         margin-top: 37px;
+      }
+   }
+}
+
+// ! ===== 604px =====
+@media (max-width: 604px) {
+   .discover {
+      &__title {
+         margin-bottom: 80px;
+      }
+      &__item {
+         display: flex;
+         flex-direction: column;
+         text-align: center;
+      }
+      &__fist-row {
+         margin-bottom: 30px;
+      }
+      &__fist-row,
+      &__second-row {
+         width: 80%;
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+      }
+   }
+}
+
+// ! ===== 587px =====
+@media (max-width: 587px) {
+   .discover {
+      &__text {
+         margin-bottom: 80px;
+      }
+      &__partner {
+         display: block;
+         max-width: 768px;
+         width: 100%;
+         margin-top: 40px;
+      }
+      &__item {
+         display: flex;
+         align-items: center;
+         flex-wrap: wrap;
+         justify-content: space-between;
+      }
+      &__binance {
+         margin: 0 20px 0 0;
+         max-width: 143px;
+         width: 100%;
+         height: 29px;
+         & img {
+            width: 100%;
+         }
+      }
+
+      &__ethereum {
+         margin: 0;
+         max-width: 92px;
+         width: 100%;
+         height: 29px;
+         & img {
+            width: 100%;
+         }
+      }
+
+      &__blockchain {
+         margin: 0 20px 0 0;
+         max-width: 188px;
+         width: 100%;
+         height: 29px;
+         & img {
+            width: 100%;
+         }
+      }
+      &__bitmex {
+         max-width: 106px;
+         width: 100%;
+         margin: 30px 0 0 0;
+         & img {
+            width: 100%;
+         }
+      }
+
+      &__image {
+         width: 490px;
+         display: grid;
+      }
+      &__img {
+         padding: 0;
+      }
+   }
+   .collections {
+      &__title {
+         font-size: 16px;
+         line-height: 20px;
+         margin: 20px 0;
+      }
+      &__left {
+         margin-right: 17px;
+      }
+      &__lft-btn,
+      &__right-btn {
+         width: 152px;
+         height: 40px;
+         font-size: 11px;
+         line-height: 14px;
+         margin-bottom: 17px;
+      }
+
+      &__view {
+         margin-top: 17px;
+         font-size: 11px;
+         line-height: 20px;
+         margin-left: 60px;
+         & img {
+            width: 22px;
+            height: 7px;
+         }
+      }
+   }
+}
+// ! ===== 568px =====
+@media (max-width: 568px) {
+   .subscribe {
+      margin-top: 208px;
+      &__title {
+         font-size: 26px;
+         line-height: 33px;
+         margin: 0 0 18px 0;
+      }
+      &__info {
+         text-align: left;
+         margin: 0;
+      }
+      &__txt {
+         max-width: 324px;
+         width: 100%;
+         height: 46.7px;
+         font-size: 13.1351px;
+         line-height: 23px;
+         margin-bottom: 32px;
+      }
+      &__email {
+         width: 180px;
+         height: 35px;
+         &::placeholder {
+            font-size: 10.2162px;
+            line-height: 18px;
+         }
+      }
+      &__submit {
+         width: 100px;
+         height: 36px;
+         font-size: 10px;
+         line-height: 15px;
+      }
+
+      &__img {
+         max-width: 326px;
+         height: 380px;
+         & img {
+            width: 100%;
+            height: 380px;
+            object-fit: cover;
+         }
+      }
+   }
+   .info {
+      margin-top: 105px;
+      &__content {
+         justify-content: flex-start;
+         align-items: flex-start;
+         margin-left: 13px;
+      }
+      &__logo {
+         margin-top: 30px;
+      }
+      &__logo-logo {
+         margin-bottom: 30px;
+         & a {
+            font-family: "Orbitron";
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 25px;
+            color: $gray;
+            margin-top: 3px;
+            & span {
+               color: $white;
+            }
+         }
+      }
+      &__logo-txt {
+         max-width: 325px;
+         width: 100%;
+         height: 106px;
+         margin-bottom: 25px;
+      }
+      &__item {
+         margin: 35px 0 0 0;
+      }
+      &__btn {
+         right: 35px;
+      }
+      &__market,
+      &__collectibles,
+      &__support,
+      &__legal,
+      &__follow {
+         margin: 0;
+         margin-top: 15px;
+      }
+   }
+}
+
+// ! ===== 490px =====
+@media (max-width: 490px) {
+   .discover {
+      &__title {
+         font-family: "Lato";
+         font-weight: 700;
+         font-size: 42px;
+         max-width: 291px;
+         height: 158px;
+         width: 100%;
+         margin-bottom: 40px;
+      }
+      &__text {
+         font-size: 20px;
+         line-height: 34px;
+         margin-bottom: 40px;
+      }
+
+      &__btn-explore {
+         width: 133px;
+         height: 34px;
+         font-size: 12px;
+         line-height: 15px;
+         padding-left: 20px;
+         & img {
+            width: 28px;
+            height: 8px;
+            margin-left: 11px;
+         }
+      }
+
+      &__btn-create {
+         font-size: 12px;
+         line-height: 15px;
+         margin-left: 20px;
+      }
+
+      &__artwork,
+      &__auctions {
+         border: none;
+      }
+
+      &__artwork-num,
+      &__auctions-num,
+      &__artists-num {
+         font-size: 18px;
+         line-height: 18px;
+      }
+      &__artwork-txt,
+      &__auctions-txt,
+      &__artists-txt {
+         font-family: "Lato";
+         font-weight: 400;
+         font-size: 12px;
+         line-height: 12px;
+         opacity: 0.7;
+      }
+      &__statics {
+         margin-top: 40px;
+      }
+      &__partner {
+         display: block;
+         max-width: 768px;
+         width: 100%;
+         margin-top: 40px;
+      }
+      &__item {
+         display: flex;
+         align-items: center;
+      }
+      &__fist-row,
+      &__second-row {
+         width: 100%;
+         display: flex;
+         justify-content: space-around;
+         align-items: center;
+      }
+      &__binance {
+         margin: 0 20px 0 0;
+         max-width: 143px;
+         width: 100%;
+         height: 29px;
+         & img {
+            width: 100%;
+         }
+      }
+
+      &__ethereum {
+         margin: 0;
+         max-width: 92px;
+         width: 100%;
+         height: 29px;
+         & img {
+            width: 100%;
+         }
+      }
+
+      &__blockchain {
+         margin: 0 20px 0 0;
+         max-width: 188px;
+         width: 100%;
+         height: 29px;
+         & img {
+            width: 100%;
+         }
+      }
+      &__bitmex {
+         max-width: 106px;
+         width: 100%;
+         margin: 0;
+         & img {
+            width: 100%;
+         }
+      }
+
+      &__image {
+         margin: 40px 0 0 0;
+      }
+   }
+   .topNFT {
+      &__title {
+         font-size: 16px;
+         line-height: 20px;
+      }
+      &__btn {
+         display: none;
+      }
+      &__btn-explore {
+         margin-top: 35px;
+         display: block;
+         padding-left: 5px;
+      }
+      &__explore {
+         margin: 0 auto;
+      }
+
+      &__slide-1 {
+         max-width: 303px !important;
+         height: 431px;
+         width: 100%;
+      }
+      &__slide-2 {
+         max-width: 303px !important;
+         width: 100%;
+         height: 431px;
+         margin: 0 25px;
+      }
+      &__slide-3 {
+         max-width: 303px !important;
+         width: 100%;
+         height: 431px;
+         margin: 0;
+      }
+      &__img {
+         width: 303px;
+         & img {
+            width: 100%;
+         }
+      }
+      &__apollo-info,
+      &__syssy-info,
+      &__satisfying-info {
+         // width: 100%;
+         margin: 30px 0 0 15px;
+      }
+      &__apollo-avatar,
+      &__syssy-avatar,
+      &__satisfying-avatar {
+         height: 26px;
+         width: 26px;
+      }
+      &__satisfying-mark,
+      &__syssy-mark,
+      &__apollo-mark {
+         width: 11px;
+         height: 12px;
+         margin: 10px 0 0 14px;
+      }
+      &__satisfying-name,
+      &__syssy-name,
+      &__apollo-name {
+         margin-top: 5px;
+      }
+
+      &__satisfying-nickname,
+      &__syssy-nickname,
+      &__apollo-nickname {
+         max-width: 57px;
+         width: 100%;
+         font-weight: 600;
+         font-size: 12px;
+         line-height: 15px;
+         margin: 8px 0 0 3px;
+      }
+      &__apollo-product,
+      &__syssy-product,
+      &__satisfying-product {
+         font-weight: 700;
+         font-size: 14px;
+         line-height: 17px;
+         height: 17px;
+      }
+
+      &__satisfying-price-title,
+      &__syssy-price-title,
+      &__apollo-price-title {
+         font-weight: 600;
+         font-size: 9px;
+         line-height: 11px;
+         margin: 0;
+      }
+
+      &__apollo-currency,
+      &__syssy-currency,
+      &__satisfying-currency {
+         margin: 0;
+         & img {
+            width: 18px;
+            height: 18px;
+         }
+      }
+
+      &__satisfying-eth,
+      &__syssy-eth,
+      &__apollo-eth {
+         font-weight: 700;
+         font-size: 7px;
+         line-height: 9px;
+         margin: 5px 0 0 5px;
+         max-width: 44px;
+         width: 100%;
+      }
+      &__satisfying-dollars,
+      &__syssy-dollars,
+      &__apollo-dollars {
+         font-weight: 400;
+         font-size: 9px;
+         line-height: 11px;
+         margin: 2px 0 0 0;
+      }
+      &__apollo-auction,
+      &__syssy-auction,
+      &__satisfying-auction {
+         margin: 0 0 0 35px;
+      }
+
+      &__satisfying-auction-title,
+      &__syssy-auction-title,
+      &__apollo-auction-title {
+         font-size: 9px;
+         line-height: 11px;
+         margin: 31px 0 0 7px;
+      }
+
+      &__satisfying-hours,
+      &__syssy-hours,
+      &__apollo-hours {
+         margin: 0 0 0 7px;
+      }
+
+      &__satisfying-min,
+      &__syssy-min,
+      &__apollo-min {
+         margin: 0px 22px 0 18px;
+      }
+      &__satisfying-sec,
+      &__syssy-sec,
+      &__apollo-sec {
+         margin-top: 0px;
+      }
+
+      &__satisfying-hours-num,
+      &__satisfying-min-num,
+      &__satisfying-sec-num,
+      &__syssy-hours-num,
+      &__syssy-min-num,
+      &__syssy-sec-num,
+      &__apollo-hours-num,
+      &__apollo-min-num,
+      &__apollo-sec-num {
+         font-size: 14px;
+         line-height: 17px;
+         height: 17px;
+      }
+
+      &__satisfying-hours-txt,
+      &__satisfying-min-txt,
+      &__satisfying-sec-txt,
+      &__syssy-hours-txt,
+      &__syssy-min-txt,
+      &__syssy-sec-txt,
+      &__apollo-min-txt,
+      &__apollo-hours-txt,
+      &__apollo-sec-txt {
+         font-size: 9px;
+         line-height: 11px;
+      }
+      &__satisfying-btn,
+      &__syssy-btn,
+      &__apollo-btn {
+         background-image: url(../img/mobilebtn.png);
+         background-repeat: no-repeat;
+         background-position: center;
+         width: 112px;
+         height: 38px;
+         font-size: 14px;
+         line-height: 17px;
+         margin: 22px 0 15px 0;
+      }
+      &__apollo-price {
+         margin: 15px 0 0 0;
+      }
+   }
+
+   .collections {
+      margin-top: 108px;
+      &__content {
+         margin: 0;
+      }
+      &__title {
+         margin: 0 0 20px 8px;
+      }
+      &__image {
+         margin: 0 auto;
+         width: 186px;
+         height: 348px;
+      }
+   }
+
+   .account {
+      margin-top: 113px;
+
+      &__title {
+         max-width: 196px;
+         width: 100%;
+         font-size: 16px;
+         line-height: 23px;
+         letter-spacing: 1px;
+         margin: 0 0 29px 6px;
+      }
+      &__btn {
+         display: none;
+      }
+      &__btn-explore {
+         margin-top: 35px;
+         display: block;
+         padding-left: 5px;
+      }
+      &__explore {
+         margin: 0 auto;
+      }
+      &__slide-1,
+      &__slide-2,
+      &__slide-3 {
+         max-width: 303px !important;
+         width: 100%;
+         height: 391px;
+         margin-left: 6px;
+      }
+      &__slide-2 {
+         margin: 0 25px;
+      }
+      &__first {
+         max-width: 309px !important;
+         & img {
+            width: 100%;
+         }
+      }
+
+      &__avatar {
+         top: 70px;
+         left: 93px;
+         & img {
+            width: 112px;
+            height: 112px;
+         }
+      }
+
+      &__name {
+         height: 21px;
+         text-align: center;
+         font-size: 16px;
+         line-height: 21px;
+         letter-spacing: 1px;
+         padding-left: 8px;
+      }
+      &__nickname {
+         max-width: 65px;
+         width: 100%;
+         height: 18px;
+         font-size: 14px;
+         line-height: 18px;
+         padding-left: 24px;
+         & img {
+            width: 11px;
+            height: 12px;
+            margin-left: 5px;
+         }
+      }
+      &__info {
+         left: 28px;
+         bottom: 28px;
+      }
+
+      &__info-user {
+         width: 246px;
+         display: flex;
+         justify-content: space-between;
+         text-align: center;
+         margin: 0 0 27px 0;
+      }
+      &__folowers,
+      &__artworks {
+         width: 57px;
+         text-align: center;
+      }
+      &__following {
+         width: 54px;
+         text-align: center;
+      }
+
+      &__folowers-num,
+      &__following-num,
+      &__artworks-num {
+         font-weight: 600;
+         font-size: 22px;
+         line-height: 28px;
+         color: $white;
+      }
+      &__folowers-txt,
+      &__following-txt,
+      &__artworks-txt {
+         font-size: 13px;
+         line-height: 17px;
+      }
+
+      &__btn-follow {
+         font-size: 14px;
+         line-height: 18px;
+         width: 167px;
+         height: 37px;
+         margin: 0 auto;
+      }
+   }
+   .sellers {
+      margin-top: 108px;
+      &__top-info {
+         margin: 0;
+      }
+      &__title {
+         margin-bottom: 20px;
+      }
+
+      &__sub-title {
+         line-height: 19px;
+         margin-bottom: 36px;
+      }
+      &__wrapper {
+         margin-left: 10px;
+      }
+      &__slide-1,
+      &__slide-2,
+      &__slide-3 {
+         max-width: 316px !important;
+         width: 100%;
+      }
+      &__eleanor,
+      &__esther,
+      &__jacob,
+      &__jane,
+      &__savannah,
+      &__robert,
+      &__jerome,
+      &__kristin,
+      &__arlene,
+      &__darlene,
+      &__wade,
+      &__kathryn {
+         height: 89px;
+         border-radius: 20px;
+         margin-bottom: 24px;
+      }
+      &__number {
+         margin-left: 21px;
+      }
+      &__avatar {
+         margin: 0 9px 0 13px;
+      }
+      &__name {
+         margin-bottom: 5px;
+      }
+      &__money {
+         font-family: "Roboto";
+         font-weight: 500;
+         font-size: 10px;
+         line-height: 16px;
+         color: rgba(255, 255, 255, 0.8);
+         & img {
+            width: 6.14px;
+            height: 9.97px;
+            margin-right: 5px;
+         }
+      }
+      &__wallet {
+         width: 72px;
+         height: 25px;
+         position: absolute;
+         right: 14px;
+         & p {
+            font-size: 11px;
+            line-height: 34px;
+         }
+      }
+
+      &__red {
+         width: 72px;
+         height: 25px;
+
+         & p {
+            font-size: 11px;
+            line-height: 34px;
+         }
+      }
+      &__btn-explore {
+         background-image: url(../img/Explorebtn.svg);
+         background: transparent;
+         box-shadow: 0px 2.35945px 57.2166px rgba(255, 86, 246, 0.51);
+         backdrop-filter: blur(56.6267px);
+         color: $white;
+         font-family: "Rajdhani";
+         font-weight: 600;
+         font-size: 20px;
+         line-height: 25px;
+         width: 140px;
+         height: 40px;
+         margin-top: 34px;
+         & img {
+            margin-left: 5px;
+         }
+      }
+
+      &__munber2 {
+         margin-left: 21px;
+      }
+   }
+
+   .nft {
+      margin-top: 108px;
+      height: 300px;
+
+      &__container {
+         height: 398px;
+      }
+      &__content {
+         width: 335px;
+         height: 275px;
+         right: 20px;
+      }
+      &__title {
+         font-size: 25px;
+         line-height: 35px;
+         margin: 33px 0 10px 41px;
+      }
+      &__txt {
+         font-size: 11px;
+         line-height: 21px;
+         max-width: 266px;
+         height: 125px;
+         width: 100%;
+         margin: 0 0 25px 41px;
+      }
+      &__btn {
+         margin-left: 41px;
+         font-size: 10px;
+         line-height: 16px;
+         &:last-child {
+            margin-left: 25px;
+         }
+         & img {
+            margin-top: 4px;
+            width: 7px;
+            height: 10px;
+         }
+      }
+   }
+}
+
+// ! ===== 375px =====
+@media (max-width: 375px) {
+   .header {
+      top: 20px;
+      &__logo {
+         left: 7px;
+         & img {
+            width: 13px;
+            height: 22px;
+         }
+         & a {
+            font-size: 16px;
+            line-height: 20px;
+            margin-top: 5px;
+            padding-left: 5px;
+         }
+      }
+      &__menu-icon {
+         top: 7px;
+      }
+   }
+
+   .discover {
+      margin-top: 48px;
+      &__info {
+         margin: 57px 0 0 0px;
+      }
+      &__text {
+         margin-bottom: 40px;
+      }
+      &__text {
+         max-width: 315px;
+         width: 100%;
+         height: 40px;
+         font-size: 14px;
+         line-height: 23px;
+         margin-bottom: 40px;
+      }
+
+      &__statics {
+         margin: 48px 0 0 0px;
+         max-width: 305px;
+         width: 100%;
+      }
+      &__artwork {
+         width: 53px;
+      }
+      &__auctions {
+         width: 50px;
+      }
+      &__artists {
+         width: 72px;
+      }
+      &__artwork-num,
+      &__auctions-num,
+      &__artists-num {
+         margin-bottom: 7px;
+      }
+
+      &__partner {
+         margin: 8px 0 0 0;
+      }
+      &__fist-row {
+         margin-left: 15px;
+         justify-content: flex-start;
+      }
+
+      &__ethereum {
+         margin: 2px 0 0 35px;
+      }
+      &__second-row {
+         justify-content: flex-start;
+      }
+
+      &__image {
+         margin: 56px 0 0 0;
+         max-width: 324px;
+         width: 100%;
+         height: 512px;
+      }
+      &__img {
+         width: 100%;
+         height: auto;
+      }
+      &__user {
+         width: 324px;
+      }
+      &__user-info {
+         margin: 33px 0 0 23px;
+      }
+      &__auction {
+         margin: 46px 0 0 40px;
+      }
+   }
+
+   .topNFT {
+      margin-top: 105px;
+      &__top {
+         margin: 0 0 30px 9px;
+      }
+
+      &__apollo-info,
+      &__syssy-info,
+      &__satisfying-info {
+         // width: 100%;
+         margin: 34px 0 0 20px;
+      }
+      &__apollo-auction,
+      &__syssy-auction,
+      &__satisfying-auction {
+         margin: 5px 0 0 35px;
+      }
+      &__btn-explore {
+         margin-top: 35px;
+         display: block;
+         padding-left: 5px;
+      }
+   }
+   .sellers {
+      margin-top: 113px;
+   }
+}
