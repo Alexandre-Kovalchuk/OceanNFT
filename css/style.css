@@ -175,17 +175,6 @@ body {
   background: rgb(32, 8, 59);
 }
 
-.hidden {
-  height: 0px;
-  overflow: hidden;
-  transition: 1s;
-}
-
-.rotate {
-  transform: rotate(180deg);
-  transition: 0.5s;
-}
-
 .wrapper {
   display: flex;
   flex-direction: column;
@@ -516,6 +505,7 @@ body {
 .partners__binance {
   max-width: 265px;
   width: 100%;
+  margin-left: 5px;
 }
 .partners__binance img {
   width: 100%;
@@ -532,8 +522,6 @@ body {
 }
 .partners__blockchain {
   margin: 4px 0 0 0px;
-  max-width: 330px;
-  width: 100%;
 }
 .partners__blockchain img {
   width: 100%;
@@ -542,36 +530,33 @@ body {
 .partners__bitmex {
   max-width: 196px;
   width: 100%;
-  margin: 19px 0px 0 0;
+  margin: 19px 6px 0 0;
 }
 .partners__bitmex img {
   width: 100%;
   height: auto;
 }
 
-.topNFT {
-  margin-top: 218px;
-  position: relative;
+.top-nft {
+  margin-top: 219px;
 }
-.topNFT__top {
+.top-nft__container {
+  overflow: hidden;
+}
+.top-nft__top {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  max-width: 1374px;
-  width: 100%;
-  height: 33px;
-  margin: 0 0 47px 5px;
+  padding: 0 14px 0 4px;
 }
-.topNFT__title {
+.top-nft__title {
   font-family: "Orbitron";
   font-weight: 700;
   font-size: 27px;
   line-height: 33px;
   color: #fff;
 }
-.topNFT__btn {
+.top-nft__link {
   display: flex;
-  align-items: center;
   background-color: transparent;
   font-family: "Orbitron";
   font-weight: 700;
@@ -580,228 +565,45 @@ body {
   color: #fff;
   width: 192px;
 }
-.topNFT__btn img {
+.top-nft__link img {
   margin-left: 15px;
 }
-.topNFT__wrapper {
-  display: flex;
-  justify-content: space-between;
+.top-nft__collection {
+  margin-top: 47px;
   margin-left: 7px;
-}
-.topNFT__slide-1 {
-  max-width: 437px !important;
   width: 100%;
-  height: 635px;
-}
-.topNFT__apollo-info {
-  margin: 44px 0 0 27px;
-}
-.topNFT__apollo-product {
-  font-family: "Rajdhani";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 23px;
-  color: #fff;
-  max-width: 200px;
-  width: 100%;
-  height: 29px;
-}
-.topNFT__apollo-nickname {
-  margin-left: 4px;
-}
-.topNFT__apollo-auction {
-  margin: 48px 0 0 22px;
-}
-.topNFT__slide-2 {
-  max-width: 437px !important;
-  width: 100%;
-  height: 635px;
-  margin: 0 35px;
-}
-.topNFT__syssy-product {
-  font-family: "Rajdhani";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 23px;
-  color: #fff;
-  max-width: 191px;
-  width: 100%;
-  height: 29px;
-}
-.topNFT__syssy-info {
-  margin: 44px 0 0 24px;
-}
-.topNFT__syssy-nickname {
-  margin-left: 5px;
-}
-.topNFT__syssy-auction {
-  margin: 48px 0 0 30px;
-}
-.topNFT__slide-3 {
-  max-width: 437px !important;
-  width: 100%;
-  height: 635px;
-  margin-right: 10px;
-}
-.topNFT__satisfying, .topNFT__syssy, .topNFT__apollo {
-  display: flex;
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) -1.52%, rgba(255, 255, 255, 0.024) 104.35%);
-  border: solid 2px rgba(255, 255, 255, 0.3);
-  max-width: 437px;
-  width: 100%;
-}
-.topNFT__satisfying-info {
-  margin: 44px 0 0 27px;
-}
-.topNFT__satisfying-product {
-  font-family: "Rajdhani";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 23px;
-  color: #fff;
-  max-width: 161px;
-  width: 100%;
-  height: 29px;
-}
-.topNFT__satisfying-name, .topNFT__syssy-name, .topNFT__apollo-name {
-  display: flex;
-  margin-top: 8px;
-}
-.topNFT__satisfying-avatar {
-  display: block;
-  margin-right: 4px;
-}
-.topNFT__satisfying-mark, .topNFT__syssy-mark, .topNFT__apollo-mark {
-  display: block;
-  margin-left: 4px;
-}
-.topNFT__satisfying-nickname, .topNFT__syssy-nickname, .topNFT__apollo-nickname {
-  height: 26px;
-  max-width: 96px;
-  width: 100%;
-  font-family: "Rajdhani";
-  font-weight: 600;
-  font-size: 20px;
-  color: #fff;
-  margin-top: 9px;
-}
-.topNFT__satisfying-price, .topNFT__syssy-price, .topNFT__apollo-price {
-  margin-top: 28px;
-}
-.topNFT__satisfying-price-title, .topNFT__syssy-price-title, .topNFT__apollo-price-title {
-  height: 18px;
-  max-width: 79px;
-  width: 100%;
-  font-family: "Rajdhani";
-  font-weight: 600;
-  font-size: 14px;
-  color: #fff;
-  opacity: 0.7;
-  margin-bottom: 10px;
-}
-.topNFT__satisfying-currency, .topNFT__syssy-currency, .topNFT__apollo-currency {
-  display: flex;
-  align-items: center;
-}
-.topNFT__satisfying-eth, .topNFT__syssy-eth, .topNFT__apollo-eth {
-  height: 16px;
-  max-width: 65px;
-  width: 100%;
-  font-family: "Orbitron";
-  font-weight: 700;
-  font-size: 13px;
-  color: #fff;
-  margin-left: 7px;
-  margin-top: 3px;
-}
-.topNFT__satisfying-dollars, .topNFT__syssy-dollars, .topNFT__apollo-dollars {
-  height: 18px;
-  max-width: 62px;
-  width: 100%;
-  color: #fff;
-  opacity: 0.7;
-  font-family: "Rajdhani";
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 18px;
-  margin-left: 6px;
-}
-.topNFT__satisfying-auction {
-  margin: 48px 0 0 62px;
-}
-.topNFT__satisfying-auction-title, .topNFT__syssy-auction-title, .topNFT__apollo-auction-title {
-  height: 18px;
-  max-width: 91px;
-  width: 100%;
-  font-family: "Rajdhani";
-  font-weight: 600;
-  font-size: 14px;
-  color: #fff;
-  opacity: 0.7;
-  margin-left: 15px;
-}
-.topNFT__satisfying-time, .topNFT__syssy-time, .topNFT__apollo-time {
   display: flex;
 }
-.topNFT__satisfying-hours-num, .topNFT__satisfying-min-num, .topNFT__satisfying-sec-num, .topNFT__syssy-hours-num, .topNFT__syssy-min-num, .topNFT__syssy-sec-num, .topNFT__apollo-hours-num, .topNFT__apollo-min-num, .topNFT__apollo-sec-num {
-  max-width: 23px;
-  width: 100%;
-  height: 27px;
-  font-family: "Rajdhani";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 23px;
-  color: #fff;
+.top-nft__collection-item {
+  width: 438px !important;
+  margin-right: 35px;
 }
-.topNFT__satisfying-hours-txt, .topNFT__satisfying-min-txt, .topNFT__satisfying-sec-txt, .topNFT__syssy-hours-txt, .topNFT__syssy-min-txt, .topNFT__syssy-sec-txt, .topNFT__apollo-min-txt, .topNFT__apollo-hours-txt, .topNFT__apollo-sec-txt {
-  color: #fff;
-  opacity: 0.7;
-  max-width: 34px;
-  width: 100%;
-  height: 18px;
-  font-family: "Rajdhani";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 14px;
-}
-.topNFT__satisfying-hours, .topNFT__syssy-hours, .topNFT__apollo-hours {
-  margin: 7px 0 0 14px;
-}
-.topNFT__satisfying-min, .topNFT__syssy-min, .topNFT__apollo-min {
-  margin: 7px 30px 0 22px;
-}
-.topNFT__satisfying-sec, .topNFT__syssy-sec, .topNFT__apollo-sec {
-  margin-top: 7px;
-}
-.topNFT__satisfying-btn, .topNFT__syssy-btn, .topNFT__apollo-btn {
-  background: linear-gradient(92.23deg, #ff56f6 21.43%, #b936ee 50.63%, #3bace2 100%, #406aff 117.04%);
-  border: 2.13px solid;
-  border-radius: 4.13158px;
+.top-nft__btn {
+  border: none;
+  background: linear-gradient(92.23deg, #ff56f6 21.43%, #b936ee 50.63%, #3bace2 100%, #406aff 117.04%) center center/cover no-repeat;
+  border: 2px solid;
+  border-radius: 4px;
   border-image-source: linear-gradient(272.52deg, #ffa6fa 47.49%, #3c79d5 98.81%);
   border-image-slice: 1;
   box-shadow: 0px 4.2631578445px 103.3815841675px 0px rgba(255, 86, 246, 0.5098039216);
-  border-radius: 2.21092px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 156px;
+  height: 49px;
   font-family: "Rajdhani";
   font-weight: 600;
-  font-size: 23.0401px;
-  line-height: 29px;
+  font-size: 23px;
   color: #fff;
-  width: 155px;
-  height: 49px;
-  margin-top: 35px;
-  margin-bottom: 26px;
-  padding-left: 5px;
+  margin-top: 40px;
+  padding-left: 10px;
 }
-.topNFT__satisfying-btn img, .topNFT__syssy-btn img, .topNFT__apollo-btn img {
-  margin-left: 12px;
+.top-nft__btn img {
+  margin: 8px 0 0 13px;
+  width: 32px;
+  height: 12px;
 }
-.topNFT__btn-explore {
+.top-nft__btn-explore {
   display: none;
 }
-.topNFT__btn-explore button {
+.top-nft__btn-explore button {
   background-image: url(../img/Explorebtn.svg);
   background-repeat: no-repeat;
   background-position: center;
@@ -818,16 +620,117 @@ body {
   align-items: center;
   justify-content: center;
 }
-.topNFT__btn-explore button img {
+.top-nft__btn-explore button img {
   margin-left: 5px;
+}
+.top-nft .profile-info {
+  width: 438px;
+  height: 236px;
+  display: flex;
+  justify-content: space-between;
+  padding: 33px 27px 26px 28px;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) -1.52%, rgba(255, 255, 255, 0.024) 104.35%);
+  -webkit-backdrop-filter: blur(39.6002px);
+          backdrop-filter: blur(39.6002px);
+  border-style: solid;
+  border-width: 2px;
+  -o-border-image: linear-gradient(145.77deg, rgba(255, 255, 255, 0.28) 0%, rgba(255, 255, 255, 0) 105.76%) 1;
+     border-image: linear-gradient(145.77deg, rgba(255, 255, 255, 0.28) 0%, rgba(255, 255, 255, 0) 105.76%) 1;
+}
+.top-nft .profile-info__product {
+  font-family: "Rajdhani";
+  font-weight: 700;
+  font-size: 23px;
+  line-height: 46px;
+  color: #fff;
+}
+.top-nft .profile-info__name {
+  width: 158px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.top-nft .profile-info__avatar {
+  width: 37px;
+  height: 37px;
+}
+.top-nft .profile-info__nickname {
+  font-family: "Rajdhani";
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 46px;
+  color: white;
+}
+.top-nft .profile-info__mark {
+  width: 16px;
+  height: 17px;
+}
+.top-nft .profile-info__price-title {
+  font-family: "Rajdhani";
+  font-weight: 600;
+  font-size: 14px;
+  color: white;
+  opacity: 0.7;
+  margin: 21px 0 13px 0;
+}
+.top-nft .profile-info__currency {
+  display: flex;
+  align-items: center;
+}
+.top-nft .profile-info__eth {
+  font-family: "Orbitron";
+  font-weight: 700;
+  font-size: 13px;
+  color: #fff;
+  margin: 0 8px 0 5px;
+}
+.top-nft .profile-info__dollars {
+  color: #fff;
+  opacity: 0.7;
+  font-family: "Rajdhani";
+  font-weight: 400;
+  font-size: 14px;
+}
+.top-nft .profile-info__auction {
+  margin-top: 14px;
+}
+.top-nft .profile-info__timer {
+  margin-left: 12px;
+  width: 135px;
+  display: flex;
+  justify-content: space-between;
+}
+.top-nft .profile-info__timer-text {
+  margin-left: 12px;
+  font-family: "Rajdhani";
+  font-weight: 600;
+  font-size: 14px;
+  color: #fff;
+  opacity: 0.7;
+  margin-bottom: 13px;
+}
+.top-nft .profile-info__timer-hours, .top-nft .profile-info__timer-minutes, .top-nft .profile-info__timer-seconds {
+  font-family: "Rajdhani";
+  font-weight: 500;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+}
+.top-nft .profile-info__timer span {
+  display: flex;
+  flex-direction: column;
+  font-family: "Rajdhani";
+  font-weight: 600;
+  font-size: 23px;
+  color: #fff;
+  margin-bottom: 5px;
 }
 
 .collections {
-  margin-top: 150px;
+  margin-top: 164px;
 }
 .collections__content {
   display: flex;
-  margin-left: 8px;
+  padding-left: 6px;
 }
 .collections__title {
   font-family: "Orbitron";
@@ -860,18 +763,30 @@ body {
   margin-bottom: 43px;
 }
 .collections__lft-btn:hover {
-  background: linear-gradient(92.23deg, #ff56f6 21.43%, #b936ee 50.63%, #3bace2 100%, #406aff 117.04%);
-  box-shadow: 0px 4.42184px 107.23px rgba(255, 86, 246, 0.51);
+  border: none;
+  background: linear-gradient(92.23deg, #ff56f6 21.43%, #b936ee 50.63%, #3bace2 100%, #406aff 117.04%) center center/cover no-repeat;
+  border: 2px solid;
+  border-radius: 4px;
+  border-image-source: linear-gradient(272.52deg, #ffa6fa 47.49%, #3c79d5 98.81%);
+  border-image-slice: 1;
+  box-shadow: 0px 4.2631578445px 103.3815841675px 0px rgba(255, 86, 246, 0.5098039216);
+  color: #fff;
 }
 .collections__lft-btn:active {
-  background: linear-gradient(92.23deg, #ff56f6 21.43%, #b936ee 50.63%, #3bace2 100%, #406aff 117.04%);
-  box-shadow: 0px 4.42184px 107.23px rgba(255, 86, 246, 0.51);
+  border: none;
+  background: linear-gradient(92.23deg, #ff56f6 21.43%, #b936ee 50.63%, #3bace2 100%, #406aff 117.04%) center center/cover no-repeat;
+  border: 2px solid;
+  border-radius: 4px;
+  border-image-source: linear-gradient(272.52deg, #ffa6fa 47.49%, #3c79d5 98.81%);
+  border-image-slice: 1;
+  box-shadow: 0px 4.2631578445px 103.3815841675px 0px rgba(255, 86, 246, 0.5098039216);
 }
 .collections__right-btn {
   display: block;
   border: 2px solid;
   border-image-source: linear-gradient(272.52deg, rgba(255, 166, 250, 0.3) 47.49%, rgba(60, 121, 213, 0.3) 98.81%);
   border-image-slice: 1;
+  background-color: transparent;
   background-color: transparent;
   font-family: "Orbitron";
   font-weight: 700;
@@ -884,12 +799,23 @@ body {
   margin-bottom: 43px;
 }
 .collections__right-btn:hover {
-  background: linear-gradient(92.23deg, #ff56f6 21.43%, #b936ee 50.63%, #3bace2 100%, #406aff 117.04%);
-  box-shadow: 0px 4.42184px 107.23px rgba(255, 86, 246, 0.51);
+  color: #fff;
+  border: none;
+  background: linear-gradient(92.23deg, #ff56f6 21.43%, #b936ee 50.63%, #3bace2 100%, #406aff 117.04%) center center/cover no-repeat;
+  border: 2px solid;
+  border-radius: 4px;
+  border-image-source: linear-gradient(272.52deg, #ffa6fa 47.49%, #3c79d5 98.81%);
+  border-image-slice: 1;
+  box-shadow: 0px 4.2631578445px 103.3815841675px 0px rgba(255, 86, 246, 0.5098039216);
 }
 .collections__right-btn:active {
-  background: linear-gradient(92.23deg, #ff56f6 21.43%, #b936ee 50.63%, #3bace2 100%, #406aff 117.04%);
-  box-shadow: 0px 4.42184px 107.23px rgba(255, 86, 246, 0.51);
+  border: none;
+  background: linear-gradient(92.23deg, #ff56f6 21.43%, #b936ee 50.63%, #3bace2 100%, #406aff 117.04%) center center/cover no-repeat;
+  border: 2px solid;
+  border-radius: 4px;
+  border-image-source: linear-gradient(272.52deg, #ffa6fa 47.49%, #3c79d5 98.81%);
+  border-image-slice: 1;
+  box-shadow: 0px 4.2631578445px 103.3815841675px 0px rgba(255, 86, 246, 0.5098039216);
 }
 .collections__right-btn:nth-child(4) {
   margin: 0;
@@ -925,7 +851,7 @@ body {
 }
 
 .account {
-  margin-top: 150px;
+  margin-top: 155px;
 }
 .account__content {
   margin-left: 5px;
@@ -954,16 +880,10 @@ body {
   margin-right: 5px;
 }
 .account__btn img {
-  margin-left: 12px;
+  margin: 3px 7px 0 10px;
 }
 .account__wrapper {
   display: flex;
-}
-.account__slide-2 {
-  margin-left: 35px;
-}
-.account__slide-3 {
-  margin: 0 35px;
 }
 .account__slide-1, .account__slide-2, .account__slide-3 {
   max-width: 438px !important;
@@ -976,10 +896,13 @@ body {
 .account__first {
   margin: 3px;
 }
+.account__first img {
+  width: 100%;
+}
 .account__avatar {
   position: absolute;
-  top: 101px;
-  left: 135px;
+  top: 105px;
+  left: 138px;
 }
 .account__name {
   margin-top: 10px;
@@ -1010,14 +933,14 @@ body {
 }
 .account__info {
   position: absolute;
-  bottom: 43px;
+  bottom: 38px;
 }
 .account__info-user {
   width: 348px;
   display: flex;
   justify-content: space-between;
   margin-bottom: 40px;
-  margin-left: 42px;
+  margin-left: 45px;
 }
 .account__folowers, .account__artworks {
   width: 72px;
@@ -1046,16 +969,19 @@ body {
 }
 .account__btn-follow {
   display: block;
-  margin-left: 100px;
+  margin-left: 104px;
   font-family: "Rajdhani";
   font-style: normal;
   font-weight: 600;
   font-size: 20px;
   line-height: 25px;
-  background: linear-gradient(92.23deg, #ff56f6 21.43%, #b936ee 50.63%, #3bace2 100%, #406aff 117.04%);
+  border: none;
+  background: linear-gradient(92.23deg, #ff56f6 21.43%, #b936ee 50.63%, #3bace2 100%, #406aff 117.04%) center center/cover no-repeat;
   border: 2px solid;
+  border-radius: 4px;
   border-image-source: linear-gradient(272.52deg, #ffa6fa 47.49%, #3c79d5 98.81%);
   border-image-slice: 1;
+  box-shadow: 0px 4.2631578445px 103.3815841675px 0px rgba(255, 86, 246, 0.5098039216);
   box-shadow: 0px 3.33558px 80.8879px rgba(255, 86, 246, 0.51);
   -webkit-backdrop-filter: blur(160.108px);
           backdrop-filter: blur(160.108px);
@@ -1109,6 +1035,7 @@ body {
 }
 .sellers__title span {
   margin-left: 5px;
+  margin-top: 3px;
   color: #ff56f6;
 }
 .sellers__title img {
@@ -1134,9 +1061,6 @@ body {
   max-width: 437px !important;
   width: 100%;
 }
-.sellers__slide-2 {
-  margin: 0 35px;
-}
 .sellers__eleanor, .sellers__esther, .sellers__jacob, .sellers__jane, .sellers__savannah, .sellers__robert, .sellers__jerome, .sellers__kristin, .sellers__arlene, .sellers__darlene, .sellers__wade, .sellers__kathryn {
   display: flex;
   align-items: center;
@@ -1147,7 +1071,7 @@ body {
   width: 100%;
   height: 124px;
   border-radius: 29px;
-  margin-bottom: 35px;
+  margin-bottom: 34px;
   position: relative;
 }
 .sellers__eleanor:last-child, .sellers__esther:last-child, .sellers__jacob:last-child, .sellers__jane:last-child, .sellers__savannah:last-child, .sellers__robert:last-child, .sellers__jerome:last-child, .sellers__kristin:last-child, .sellers__arlene:last-child, .sellers__darlene:last-child, .sellers__wade:last-child, .sellers__kathryn:last-child {
@@ -1163,7 +1087,10 @@ body {
   color: rgba(255, 255, 255, 0.8);
 }
 .sellers__avatar {
-  margin: 0 13px 0 17px;
+  margin: 0 13px;
+}
+.sellers__info {
+  height: 56px;
 }
 .sellers__name {
   font-family: "Roboto";
@@ -1193,7 +1120,8 @@ body {
   justify-content: center;
   align-items: center;
   position: absolute;
-  right: 20px;
+  top: 49px;
+  right: 17px;
 }
 .sellers__wallet p {
   font-family: "Roboto";
@@ -1228,11 +1156,13 @@ body {
   margin-left: 10px;
 }
 .sellers__btn-explore {
+  border: none;
+  background: linear-gradient(92.23deg, #ff56f6 21.43%, #b936ee 50.63%, #3bace2 100%, #406aff 117.04%) center center/cover no-repeat;
   border: 2px solid;
-  border-image-source: linear-gradient(272.52deg, rgba(255, 166, 250, 0.3) 47.49%, rgba(60, 121, 213, 0.3) 98.81%);
+  border-radius: 4px;
+  border-image-source: linear-gradient(272.52deg, #ffa6fa 47.49%, #3c79d5 98.81%);
   border-image-slice: 1;
-  background: linear-gradient(92.23deg, #ff56f6 21.43%, #b936ee 50.63%, #3bace2 100%, #406aff 117.04%);
-  box-shadow: 0px 4.81747px 116.824px rgba(255, 86, 246, 0.51);
+  box-shadow: 0px 4.2631578445px 103.3815841675px 0px rgba(255, 86, 246, 0.5098039216);
   -webkit-backdrop-filter: blur(115.619px);
           backdrop-filter: blur(115.619px);
   color: #fff;
@@ -1242,11 +1172,12 @@ body {
   line-height: 25px;
   width: 235px;
   height: 50px;
-  margin-top: 55px;
+  margin-top: 60px;
+  padding-left: 5px;
 }
 
 .nft {
-  margin-top: 160px;
+  margin-top: 165px;
   background-image: url(../img/bg.png);
   background-repeat: no-repeat;
   background-position: center;
@@ -1305,15 +1236,13 @@ body {
 .nft__btn:last-child {
   margin-left: 40px;
 }
-.nft__btn img {
-  margin-top: 5px;
-}
 
 .subscribe {
-  margin-top: 297px;
+  margin-top: 293px;
 }
 .subscribe__content {
   display: flex;
+  padding-left: 8px;
 }
 .subscribe__img {
   max-width: 698px;
@@ -1345,7 +1274,7 @@ body {
   margin-bottom: 50px;
 }
 .subscribe__info {
-  margin-left: 80px;
+  margin-left: 77px;
 }
 .subscribe__email {
   width: 275px;
@@ -1394,7 +1323,7 @@ body {
 }
 
 .info {
-  margin-top: 160px;
+  margin-top: 162px;
 }
 .info__content {
   border-top: 1px solid #4e3f69;
@@ -1496,7 +1425,7 @@ body {
 }
 
 .footer {
-  margin-top: 86px;
+  margin-top: 77px;
 }
 .footer__content {
   border-top: 1px solid #4e3f69;
@@ -1536,6 +1465,14 @@ body {
   border-right: 1px solid #d9dbe1;
 }
 
+@media (max-width: 1400px) {
+  .top-nft__collection {
+    margin-left: 0px;
+  }
+  .sellers__wrapper {
+    margin-left: 0px;
+  }
+}
 @media (max-width: 1335px) {
   .discover__title {
     margin-bottom: 100px;
@@ -1677,6 +1614,11 @@ body {
   }
 }
 @media (max-width: 992px) {
+  .hidden {
+    height: 0px;
+    overflow: hidden;
+    transition: 1s;
+  }
   .header__menu {
     margin: 0 auto 0 90px;
   }
@@ -1730,6 +1672,9 @@ body {
   }
   .info__logo-txt {
     width: 282px;
+  }
+  .info__market-list, .info__market-item {
+    transition: 1s;
   }
   .info__market, .info__collectibles, .info__support, .info__legal, .info__follow {
     max-width: 500px;
@@ -1926,9 +1871,103 @@ body {
     font-size: 21px;
     line-height: 26px;
   }
-  .account__title, .account__btn {
-    font-size: 21px;
-    line-height: 26px;
+  .account {
+    margin-top: 113px;
+  }
+  .account__title {
+    max-width: 196px;
+    width: 100%;
+    font-size: 16px;
+    line-height: 23px;
+    letter-spacing: 1px;
+    margin: 0 0 29px 6px;
+  }
+  .account__btn {
+    display: none;
+  }
+  .account__btn-explore {
+    margin-top: 35px;
+    display: block;
+    padding-left: 5px;
+  }
+  .account__explore {
+    margin: 0 auto;
+  }
+  .account__slide-1, .account__slide-2, .account__slide-3 {
+    max-width: 303px !important;
+    width: 100%;
+    height: 391px;
+  }
+  .account__first {
+    max-width: 309px !important;
+  }
+  .account__first img {
+    width: 100%;
+  }
+  .account__avatar {
+    top: 70px;
+    left: 93px;
+  }
+  .account__avatar img {
+    width: 112px;
+    height: 112px;
+  }
+  .account__name {
+    height: 21px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 21px;
+    letter-spacing: 1px;
+    padding-left: 8px;
+  }
+  .account__nickname {
+    max-width: 65px;
+    width: 100%;
+    height: 18px;
+    font-size: 14px;
+    line-height: 18px;
+    padding-left: 24px;
+  }
+  .account__nickname img {
+    width: 11px;
+    height: 12px;
+    margin-left: 5px;
+  }
+  .account__info {
+    left: 28px;
+    bottom: 28px;
+  }
+  .account__info-user {
+    width: 246px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin: 0 0 27px 0;
+  }
+  .account__folowers, .account__artworks {
+    width: 57px;
+    text-align: center;
+  }
+  .account__following {
+    width: 54px;
+    text-align: center;
+  }
+  .account__folowers-num, .account__following-num, .account__artworks-num {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 28px;
+    color: #fff;
+  }
+  .account__folowers-txt, .account__following-txt, .account__artworks-txt {
+    font-size: 13px;
+    line-height: 17px;
+  }
+  .account__btn-follow {
+    font-size: 14px;
+    line-height: 18px;
+    width: 167px;
+    height: 37px;
+    margin: 0 auto;
   }
   .sellers__title {
     font-size: 19px;
@@ -2168,17 +2207,18 @@ body {
     margin-bottom: 17px;
   }
   .collections__view {
-    margin-top: 17px;
-    font-size: 11px;
+    margin-top: 21px;
+    font-size: 8px;
     line-height: 20px;
-    margin-left: 60px;
+    margin-left: 88px;
   }
   .collections__view img {
+    margin-left: 6px;
     width: 22px;
     height: 7px;
   }
 }
-@media (max-width: 568px) {
+@media (max-width: 576px) {
   .subscribe {
     margin-top: 208px;
   }
@@ -2268,8 +2308,137 @@ body {
     margin: 0;
     margin-top: 15px;
   }
-}
-@media (max-width: 490px) {
+  .top-nft {
+    margin-top: 108px;
+  }
+  .top-nft__title {
+    font-size: 16px;
+    line-height: 20px;
+    margin-left: 5px;
+  }
+  .top-nft__link {
+    display: none;
+  }
+  .top-nft__collection {
+    margin-top: 35px;
+    margin-left: 10px;
+  }
+  .top-nft__collection-item {
+    width: 303px !important;
+    margin-right: 35px;
+  }
+  .top-nft__collection-item img {
+    width: 100%;
+  }
+  .top-nft__btn {
+    width: 108px;
+    height: 34px;
+    font-size: 14px;
+    padding: 0px 0px 0 9px;
+    margin-top: 27px;
+  }
+  .top-nft__btn img {
+    width: 22px;
+    height: 8.34px;
+    margin: 5px 0 0 15px;
+  }
+  .top-nft__btn-explore {
+    margin-top: 38px;
+    display: block;
+    padding-left: 5px;
+  }
+  .top-nft__explore {
+    margin: 0 auto;
+  }
+  .top-nft .profile-info {
+    width: 303px;
+    height: 164px;
+    padding: 33px 19px 18px 20px;
+  }
+  .top-nft .profile-info__product {
+    font-family: "Rajdhani";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 17px;
+    margin-bottom: 8px;
+  }
+  .top-nft .profile-info__name {
+    width: 115px;
+    justify-content: flex-start;
+  }
+  .top-nft .profile-info__avatar {
+    width: 26px;
+    height: 26px;
+  }
+  .top-nft .profile-info__nickname {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+    margin-left: 3px;
+  }
+  .top-nft .profile-info__mark {
+    width: 11px;
+    height: 12px;
+    margin: 0px 0 0 14px;
+  }
+  .top-nft .profile-info__price {
+    margin: 0;
+  }
+  .top-nft .profile-info__price-title {
+    font-weight: 600;
+    font-size: 9px;
+    line-height: 11px;
+    margin: 20px 0 8px 0;
+  }
+  .top-nft .profile-info__currency {
+    margin-left: -2px;
+    max-width: 105px;
+    width: 100%;
+  }
+  .top-nft .profile-info__currency img {
+    width: 17px;
+    height: 17px;
+  }
+  .top-nft .profile-info__eth {
+    font-weight: 700;
+    font-size: 7px;
+    line-height: 9px;
+    margin: 0px 9px 0 6px;
+    max-width: 44px;
+    width: 100%;
+  }
+  .top-nft .profile-info__dollars {
+    font-weight: 400;
+    font-size: 9px;
+    line-height: 11px;
+  }
+  .top-nft .profile-info__auction {
+    margin-top: 2px;
+  }
+  .top-nft .profile-info__timer-text {
+    font-weight: 600;
+    font-size: 9px;
+    line-height: 11px;
+    margin-bottom: 9px;
+    margin-left: 8px;
+  }
+  .top-nft .profile-info__timer {
+    width: 100px;
+    margin-left: 8px;
+  }
+  .top-nft .profile-info__timer-hours {
+    font-size: 9px;
+  }
+  .top-nft .profile-info__timer-minutes {
+    font-size: 9px;
+  }
+  .top-nft .profile-info__timer-seconds {
+    font-size: 9px;
+  }
+  .top-nft .profile-info__timer span {
+    font-size: 14px;
+  }
   .discover__title {
     font-family: "Lato";
     font-weight: 700;
@@ -2372,139 +2541,6 @@ body {
   .discover__image {
     margin: 40px 0 0 0;
   }
-  .topNFT__title {
-    font-size: 16px;
-    line-height: 20px;
-  }
-  .topNFT__btn {
-    display: none;
-  }
-  .topNFT__btn-explore {
-    margin-top: 35px;
-    display: block;
-    padding-left: 5px;
-  }
-  .topNFT__explore {
-    margin: 0 auto;
-  }
-  .topNFT__slide-1 {
-    max-width: 303px !important;
-    height: 431px;
-    width: 100%;
-  }
-  .topNFT__slide-2 {
-    max-width: 303px !important;
-    width: 100%;
-    height: 431px;
-    margin: 0 25px;
-  }
-  .topNFT__slide-3 {
-    max-width: 303px !important;
-    width: 100%;
-    height: 431px;
-    margin: 0;
-  }
-  .topNFT__img {
-    width: 303px;
-  }
-  .topNFT__img img {
-    width: 100%;
-  }
-  .topNFT__apollo-info, .topNFT__syssy-info, .topNFT__satisfying-info {
-    margin: 30px 0 0 15px;
-  }
-  .topNFT__apollo-avatar, .topNFT__syssy-avatar, .topNFT__satisfying-avatar {
-    height: 26px;
-    width: 26px;
-  }
-  .topNFT__satisfying-mark, .topNFT__syssy-mark, .topNFT__apollo-mark {
-    width: 11px;
-    height: 12px;
-    margin: 10px 0 0 14px;
-  }
-  .topNFT__satisfying-name, .topNFT__syssy-name, .topNFT__apollo-name {
-    margin-top: 5px;
-  }
-  .topNFT__satisfying-nickname, .topNFT__syssy-nickname, .topNFT__apollo-nickname {
-    max-width: 57px;
-    width: 100%;
-    font-weight: 600;
-    font-size: 12px;
-    line-height: 15px;
-    margin: 8px 0 0 3px;
-  }
-  .topNFT__apollo-product, .topNFT__syssy-product, .topNFT__satisfying-product {
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 17px;
-    height: 17px;
-  }
-  .topNFT__satisfying-price-title, .topNFT__syssy-price-title, .topNFT__apollo-price-title {
-    font-weight: 600;
-    font-size: 9px;
-    line-height: 11px;
-    margin: 0;
-  }
-  .topNFT__apollo-currency, .topNFT__syssy-currency, .topNFT__satisfying-currency {
-    margin: 0;
-  }
-  .topNFT__apollo-currency img, .topNFT__syssy-currency img, .topNFT__satisfying-currency img {
-    width: 18px;
-    height: 18px;
-  }
-  .topNFT__satisfying-eth, .topNFT__syssy-eth, .topNFT__apollo-eth {
-    font-weight: 700;
-    font-size: 7px;
-    line-height: 9px;
-    margin: 5px 0 0 5px;
-    max-width: 44px;
-    width: 100%;
-  }
-  .topNFT__satisfying-dollars, .topNFT__syssy-dollars, .topNFT__apollo-dollars {
-    font-weight: 400;
-    font-size: 9px;
-    line-height: 11px;
-    margin: 2px 0 0 0;
-  }
-  .topNFT__apollo-auction, .topNFT__syssy-auction, .topNFT__satisfying-auction {
-    margin: 0 0 0 35px;
-  }
-  .topNFT__satisfying-auction-title, .topNFT__syssy-auction-title, .topNFT__apollo-auction-title {
-    font-size: 9px;
-    line-height: 11px;
-    margin: 31px 0 0 7px;
-  }
-  .topNFT__satisfying-hours, .topNFT__syssy-hours, .topNFT__apollo-hours {
-    margin: 0 0 0 7px;
-  }
-  .topNFT__satisfying-min, .topNFT__syssy-min, .topNFT__apollo-min {
-    margin: 0px 22px 0 18px;
-  }
-  .topNFT__satisfying-sec, .topNFT__syssy-sec, .topNFT__apollo-sec {
-    margin-top: 0px;
-  }
-  .topNFT__satisfying-hours-num, .topNFT__satisfying-min-num, .topNFT__satisfying-sec-num, .topNFT__syssy-hours-num, .topNFT__syssy-min-num, .topNFT__syssy-sec-num, .topNFT__apollo-hours-num, .topNFT__apollo-min-num, .topNFT__apollo-sec-num {
-    font-size: 14px;
-    line-height: 17px;
-    height: 17px;
-  }
-  .topNFT__satisfying-hours-txt, .topNFT__satisfying-min-txt, .topNFT__satisfying-sec-txt, .topNFT__syssy-hours-txt, .topNFT__syssy-min-txt, .topNFT__syssy-sec-txt, .topNFT__apollo-min-txt, .topNFT__apollo-hours-txt, .topNFT__apollo-sec-txt {
-    font-size: 9px;
-    line-height: 11px;
-  }
-  .topNFT__satisfying-btn, .topNFT__syssy-btn, .topNFT__apollo-btn {
-    background-image: url(../img/mobilebtn.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 112px;
-    height: 38px;
-    font-size: 14px;
-    line-height: 17px;
-    margin: 22px 0 15px 0;
-  }
-  .topNFT__apollo-price {
-    margin: 15px 0 0 0;
-  }
   .collections {
     margin-top: 108px;
   }
@@ -2518,108 +2554,6 @@ body {
     margin: 0 auto;
     width: 186px;
     height: 348px;
-  }
-  .account {
-    margin-top: 113px;
-  }
-  .account__title {
-    max-width: 196px;
-    width: 100%;
-    font-size: 16px;
-    line-height: 23px;
-    letter-spacing: 1px;
-    margin: 0 0 29px 6px;
-  }
-  .account__btn {
-    display: none;
-  }
-  .account__btn-explore {
-    margin-top: 35px;
-    display: block;
-    padding-left: 5px;
-  }
-  .account__explore {
-    margin: 0 auto;
-  }
-  .account__slide-1, .account__slide-2, .account__slide-3 {
-    max-width: 303px !important;
-    width: 100%;
-    height: 391px;
-    margin-left: 6px;
-  }
-  .account__slide-2 {
-    margin: 0 25px;
-  }
-  .account__first {
-    max-width: 309px !important;
-  }
-  .account__first img {
-    width: 100%;
-  }
-  .account__avatar {
-    top: 70px;
-    left: 93px;
-  }
-  .account__avatar img {
-    width: 112px;
-    height: 112px;
-  }
-  .account__name {
-    height: 21px;
-    text-align: center;
-    font-size: 16px;
-    line-height: 21px;
-    letter-spacing: 1px;
-    padding-left: 8px;
-  }
-  .account__nickname {
-    max-width: 65px;
-    width: 100%;
-    height: 18px;
-    font-size: 14px;
-    line-height: 18px;
-    padding-left: 24px;
-  }
-  .account__nickname img {
-    width: 11px;
-    height: 12px;
-    margin-left: 5px;
-  }
-  .account__info {
-    left: 28px;
-    bottom: 28px;
-  }
-  .account__info-user {
-    width: 246px;
-    display: flex;
-    justify-content: space-between;
-    text-align: center;
-    margin: 0 0 27px 0;
-  }
-  .account__folowers, .account__artworks {
-    width: 57px;
-    text-align: center;
-  }
-  .account__following {
-    width: 54px;
-    text-align: center;
-  }
-  .account__folowers-num, .account__following-num, .account__artworks-num {
-    font-weight: 600;
-    font-size: 22px;
-    line-height: 28px;
-    color: #fff;
-  }
-  .account__folowers-txt, .account__following-txt, .account__artworks-txt {
-    font-size: 13px;
-    line-height: 17px;
-  }
-  .account__btn-follow {
-    font-size: 14px;
-    line-height: 18px;
-    width: 167px;
-    height: 37px;
-    margin: 0 auto;
   }
   .sellers {
     margin-top: 108px;
@@ -2686,22 +2620,7 @@ body {
     line-height: 34px;
   }
   .sellers__btn-explore {
-    background-image: url(../img/Explorebtn.svg);
-    background: transparent;
-    box-shadow: 0px 2.35945px 57.2166px rgba(255, 86, 246, 0.51);
-    -webkit-backdrop-filter: blur(56.6267px);
-            backdrop-filter: blur(56.6267px);
-    color: #fff;
-    font-family: "Rajdhani";
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 25px;
-    width: 140px;
-    height: 40px;
-    margin-top: 34px;
-  }
-  .sellers__btn-explore img {
-    margin-left: 5px;
+    display: none;
   }
   .sellers__munber2 {
     margin-left: 21px;
@@ -2764,6 +2683,9 @@ body {
   }
   .header__menu-icon {
     top: 7px;
+  }
+  .top-nft {
+    margin-top: 112px;
   }
   .discover {
     margin-top: 48px;
@@ -2831,24 +2753,86 @@ body {
   .discover__auction {
     margin: 46px 0 0 40px;
   }
-  .topNFT {
-    margin-top: 105px;
+  .collections {
+    margin-top: 106px;
   }
-  .topNFT__top {
-    margin: 0 0 30px 9px;
+  .collections__content {
+    padding-left: 0px;
   }
-  .topNFT__apollo-info, .topNFT__syssy-info, .topNFT__satisfying-info {
-    margin: 34px 0 0 20px;
+  .collections__title {
+    padding-left: 3px;
   }
-  .topNFT__apollo-auction, .topNFT__syssy-auction, .topNFT__satisfying-auction {
-    margin: 5px 0 0 35px;
+  .account {
+    margin-top: 112px;
   }
-  .topNFT__btn-explore {
-    margin-top: 35px;
-    display: block;
-    padding-left: 5px;
+  .account__slider {
+    margin-left: 5px;
+  }
+  .account__avatar {
+    top: 70px;
+    left: 96px;
+  }
+  .account__btn-explore {
+    margin-top: 40px;
+    padding: 0;
   }
   .sellers {
-    margin-top: 113px;
+    margin-top: 102px;
+  }
+  .sellers__title {
+    margin-bottom: 17px;
+  }
+  .sellers__slider {
+    margin-left: 2px;
+  }
+  .sellers__wallet {
+    top: 35px;
+    right: 10px;
+  }
+  .sellers__eleanor, .sellers__esther, .sellers__jacob, .sellers__jane, .sellers__savannah, .sellers__robert, .sellers__jerome, .sellers__kristin, .sellers__arlene, .sellers__darlene, .sellers__wade, .sellers__kathryn {
+    margin-bottom: 26px;
+  }
+  .sellers__btn-clone {
+    margin-top: 33px;
+    margin-left: 5px;
+  }
+  .nft {
+    margin-top: 106px;
+  }
+  .nft__title {
+    margin: 33px 0 10px 39px;
+  }
+  .nft__txt {
+    margin: 0 0 25px 39px;
+  }
+  .nft__btn {
+    margin-left: 39px;
+  }
+  .subscribe {
+    margin-top: 208px;
+  }
+  .subscribe__content {
+    padding-left: 12px;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .info {
+    margin-top: 107px;
+  }
+  .info__content {
+    padding-left: 0px;
+  }
+  .info__logo-logo {
+    margin-bottom: 28px;
+  }
+  .footer {
+    margin-top: 22px;
+  }
+  .footer__dev {
+    width: 310px;
+  }
+  .footer__private {
+    padding: 0;
+    margin: 0 0 0 26px;
   }
 }

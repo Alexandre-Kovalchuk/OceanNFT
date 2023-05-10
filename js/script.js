@@ -19,17 +19,85 @@ const infoMarket = document.querySelector('.market'),
    infofFollow = document.querySelector('.follow');
 
 //! ===== topNFT__swiper =====
-const topNFT = new Swiper('.topNFT__swiper', {
-   // Optional parameters
-   loop: true,
-   slidesPerView: 1,
 
-   // Navigation arrows
-   navigation: {
-      nextEl: '.topNFT__btn, .topNFT__explore',
-   },
+const swiper = new Swiper('.top-nft__collection', {
+   slidesPerView: 3,
+   spaceBetween: 35,
+   breakpoints: {
+      1400: {
+         slidesPerView: 3,
 
+      },
+      1350: {
+         slidesPerView: 2.8,
+
+      },
+      1260: {
+         slidesPerView: 2.65,
+      },
+      1170: {
+         slidesPerView: 2.5,
+
+      },
+      1125: {
+         slidesPerView: 2.4,
+
+      },
+      1070: {
+         slidesPerView: 2.27,
+
+      },
+      992: {
+         slidesPerView: 2.1,
+      },
+      950: {
+         slidesPerView: 2,
+      },
+      880: {
+         slidesPerView: 1.9,
+      },
+      850: {
+         slidesPerView: 1.8,
+      },
+      700: {
+         slidesPerView: 1.6,
+      },
+      610: {
+         slidesPerView: 1.3,
+      },
+      576: {
+         slidesPerView: 1.7,
+
+      },
+      550: {
+         slidesPerView: 1.6,
+      },
+      500: {
+         slidesPerView: 1.52,
+      },
+      490: {
+         slidesPerView: 1.4,
+         spaceBetween: 25,
+      },
+      450: {
+         slidesPerView: 1.3,
+         spaceBetween: 25,
+      },
+      400: {
+         slidesPerView: 1.2,
+         spaceBetween: 25,
+      },
+      375: {
+         slidesPerView: 1.1,
+         spaceBetween: 25,
+      },
+      0: {
+         slidesPerView: 1,
+      },
+   }
 });
+
+
 
 //! ===== меню бургер =====
 if (iconMenu) {
@@ -56,33 +124,147 @@ rightBtn.forEach(btn => {
 });
 //! ===== account__swiper =====
 const accountSwiper = new Swiper('.account__swiper', {
-   // Optional parameters
-   loop: true,
-   slidesPerView: 1,
+      slidesPerView: 3,
+      spaceBetween: 35,
+      breakpoints: {
+         1400: {
+            slidesPerView: 3,
+   
+         },
+         1350: {
+            slidesPerView: 2.9,
+   
+         },
+         1260: {
+            slidesPerView: 2.8,
+         },
+         1170: {
+            slidesPerView: 2.7,
 
-   // Navigation arrows
-   navigation: {
-      nextEl: '.account__btn, .account__explore',
-   },
-});
+         },
+         1125: {
+            slidesPerView: 2.5,
+   
+         },
+         1070: {
+            slidesPerView: 2.35,
+   
+         },
+         992: {
+            slidesPerView: 2.2,
+         },
+         950: {
+            slidesPerView: 2.1,
+         },
+         880: {
+            slidesPerView: 2,
+         },
+         850: {
+            slidesPerView: 1.85,
+            spaceBetween: 25,
+         },
+         700: {
+            slidesPerView: 1.78,
+            spaceBetween: 25,
+         },
+         610: {
+            slidesPerView: 1.5,
+            spaceBetween: 25,
+         },
+         576: {
+            slidesPerView: 1.7,
+            spaceBetween: 25,
+         },
+         550: {
+            slidesPerView: 1.65,
+            spaceBetween: 25,
+         },
+         500: {
+            slidesPerView: 1.58,
+            spaceBetween: 25,
+         },
+         490: {
+            slidesPerView: 1.5,
+            spaceBetween: 25,
+         },
+         450: {
+            slidesPerView: 1.45,
+            spaceBetween: 25,
+         },
+         400: {
+            slidesPerView: 1.35,
+            spaceBetween: 25,
+         },
+         375: {
+            slidesPerView: 1.1,
+            spaceBetween: 25,
+         },
+         0: {
+            slidesPerView: 1,
+         },
+      }
+   });
+
 //! ===== sellers__swiper =====
 const sellersSwiper = new Swiper('.sellers__swiper', {
-   // Optional parameters
-   loop: true,
-   slidesPerView: 1,
-   // centeredSlides: true,
-   // centeredSlidesBounds: true,
-   // Navigation arrows
-   navigation: {
-      nextEl: '.sellers__btn-explore',
-   },
-   // Responsive breakpoints
+   slidesPerView: 3,
+   spaceBetween: 35,
    breakpoints: {
-      // when window width is >= 768px
+      1400: {
+         slidesPerView: 3,
+      },
+      1340: {
+         slidesPerView: 2.8,
+      },
+      1280: {
+         slidesPerView: 2.7,
+      },
+      1220: {
+         slidesPerView: 2.55,
+      },
+      1150: {
+         slidesPerView: 2.35,
+      },
+      1020: {
+         slidesPerView: 2.15,
+      },
+      992: {
+         slidesPerView: 2.1,
+      },
+      850: {
+         slidesPerView: 1.8,
+      },
+      820: {
+         slidesPerView: 1.77,
+      },
+      800: {
+         slidesPerView: 1.6,
+
+      },
+      768: {
+         slidesPerView: 1.9,
+         spaceBetween: 25,
+      },
+      576: {
+         slidesPerView: 1.6,
+         spaceBetween: 25,
+      },
+      520: {
+         slidesPerView: 1.58,
+         spaceBetween: 25,
+      },
       490: {
+         slidesPerView: 1.45,
+         spaceBetween: 25,
+      },
+      375: {
+         slidesPerView: 1.05,
+
+      },
+      0: {
          slidesPerView: 1,
       },
-   },
+   }
 });
 
 //! ===== Accardion =====
@@ -114,12 +296,3 @@ followBtn.addEventListener('click', () => {
    followBtn.classList.toggle('rotate');
 });
 
-window.addEventListener("resize", () => {
-   if (window.innerWidth <= 992) {
-      infoMarket.classList.add('hidden');
-      infoCollectibles.classList.add('hidden');
-      infoSupport.classList.add('hidden');
-      infoLegal.classList.add('hidden');
-      infofFollow.classList.add('hidden');
-   }
-});

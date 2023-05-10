@@ -4,6 +4,8 @@
 // * ===== Fonts =====
 @import "_fonts";
 
+// * ===== Mixins =====
+@import "_mixins";
 // * ===== Variables =====
 @import "_variables";
 
@@ -17,14 +19,10 @@
 body {
    background: rgba(32, 8, 59, 1);
 }
-.hidden {
-   height: 0px;
-   overflow: hidden;
-   transition: 1s;
-}
+
 .rotate {
-   transform: rotate(180deg);
-   transition: 0.5s;
+   // transform: rotate(180deg);
+   // transition: 0.5s;
 }
 
 //* ===== Wrapper =====
@@ -388,6 +386,7 @@ body {
    &__binance {
       max-width: 265px;
       width: 100%;
+      margin-left: 5px;
       & img {
          width: 100%;
          height: auto;
@@ -405,8 +404,6 @@ body {
    }
    &__blockchain {
       margin: 4px 0 0 0px;
-      max-width: 330px;
-      width: 100%;
       & img {
          width: 100%;
          height: auto;
@@ -415,7 +412,7 @@ body {
    &__bitmex {
       max-width: 196px;
       width: 100%;
-      margin: 19px 0px 0 0;
+      margin: 19px 6px 0 0;
       & img {
          width: 100%;
          height: auto;
@@ -423,17 +420,15 @@ body {
    }
 }
 // * ===== TopNFT =====
-.topNFT {
-   margin-top: 218px;
-   position: relative;
+.top-nft {
+   margin-top: 219px;
+   &__container {
+      overflow: hidden;
+   }
    &__top {
       display: flex;
       justify-content: space-between;
-      align-items: center;
-      max-width: 1374px;
-      width: 100%;
-      height: 33px;
-      margin: 0 0 47px 5px;
+      padding: 0 14px 0 4px;
    }
 
    &__title {
@@ -443,9 +438,8 @@ body {
       line-height: 33px;
       color: $white;
    }
-   &__btn {
+   &__link {
       display: flex;
-      align-items: center;
       background-color: transparent;
       font-family: "Orbitron";
       font-weight: 700;
@@ -457,278 +451,31 @@ body {
          margin-left: 15px;
       }
    }
-
-   &__wrapper {
-      display: flex;
-      justify-content: space-between;
+   &__collection {
+      margin-top: 47px;
       margin-left: 7px;
-   }
-   // * ===== Slide-1 =====
-   &__slide-1 {
-      max-width: 437px !important;
       width: 100%;
-      height: 635px;
-   }
-   &__apollo-info {
-      margin: 44px 0 0 27px;
-   }
-   &__apollo-product {
-      font-family: "Rajdhani";
-      font-style: normal;
-      font-weight: 700;
-      font-size: 23px;
-      color: $white;
-      max-width: 200px;
-      width: 100%;
-      height: 29px;
-   }
-   &__apollo-nickname {
-      margin-left: 4px;
-   }
-   &__apollo-auction {
-      margin: 48px 0 0 22px;
-   }
-
-   // * ===== Slide-2 =====
-   &__slide-2 {
-      max-width: 437px !important;
-      width: 100%;
-      height: 635px;
-      margin: 0 35px;
-   }
-   &__syssy-product {
-      font-family: "Rajdhani";
-      font-style: normal;
-      font-weight: 700;
-      font-size: 23px;
-      color: $white;
-      max-width: 191px;
-      width: 100%;
-      height: 29px;
-   }
-   &__syssy-info {
-      margin: 44px 0 0 24px;
-   }
-   &__syssy-nickname {
-      margin-left: 5px;
-   }
-   &__syssy-auction {
-      margin: 48px 0 0 30px;
-   }
-
-   // * ===== Slide-3 =====
-   &__slide-3 {
-      max-width: 437px !important;
-      width: 100%;
-      height: 635px;
-      margin-right: 10px;
-   }
-   &__satisfying,
-   &__syssy,
-   &__apollo {
-      display: flex;
-      background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) -1.52%, rgba(255, 255, 255, 0.024) 104.35%);
-      // backdrop-filter: blur(39.6002px);
-      border: solid 2px rgba(255, 255, 255, 0.3);
-      max-width: 437px;
-      width: 100%;
-   }
-   &__satisfying-info {
-      margin: 44px 0 0 27px;
-   }
-   &__satisfying-product {
-      font-family: "Rajdhani";
-      font-style: normal;
-      font-weight: 700;
-      font-size: 23px;
-      color: $white;
-      max-width: 161px;
-      width: 100%;
-      height: 29px;
-   }
-   &__satisfying-name,
-   &__syssy-name,
-   &__apollo-name {
-      display: flex;
-      margin-top: 8px;
-   }
-   &__satisfying-avatar {
-      display: block;
-      margin-right: 4px;
-   }
-   &__satisfying-mark,
-   &__syssy-mark,
-   &__apollo-mark {
-      display: block;
-      margin-left: 4px;
-   }
-
-   &__satisfying-nickname,
-   &__syssy-nickname,
-   &__apollo-nickname {
-      height: 26px;
-      max-width: 96px;
-      width: 100%;
-      font-family: "Rajdhani";
-      font-weight: 600;
-      font-size: 20px;
-      color: $white;
-      margin-top: 9px;
-   }
-   &__satisfying-price,
-   &__syssy-price,
-   &__apollo-price {
-      margin-top: 28px;
-   }
-
-   &__satisfying-price-title,
-   &__syssy-price-title,
-   &__apollo-price-title {
-      height: 18px;
-      max-width: 79px;
-      width: 100%;
-      font-family: "Rajdhani";
-      font-weight: 600;
-      font-size: 14px;
-      color: $white;
-      opacity: 0.7;
-      margin-bottom: 10px;
-   }
-
-   &__satisfying-currency,
-   &__syssy-currency,
-   &__apollo-currency {
-      display: flex;
-      align-items: center;
-   }
-   &__satisfying-eth,
-   &__syssy-eth,
-   &__apollo-eth {
-      height: 16px;
-      max-width: 65px;
-      width: 100%;
-      font-family: "Orbitron";
-      font-weight: 700;
-      font-size: 13px;
-      color: $white;
-      margin-left: 7px;
-      margin-top: 3px;
-   }
-
-   &__satisfying-dollars,
-   &__syssy-dollars,
-   &__apollo-dollars {
-      height: 18px;
-      max-width: 62px;
-      width: 100%;
-      color: $white;
-      opacity: 0.7;
-      font-family: "Rajdhani";
-      font-weight: 400;
-      font-size: 14px;
-      line-height: 18px;
-      margin-left: 6px;
-   }
-   &__satisfying-auction {
-      margin: 48px 0 0 62px;
-   }
-   &__satisfying-auction-title,
-   &__syssy-auction-title,
-   &__apollo-auction-title {
-      height: 18px;
-      max-width: 91px;
-      width: 100%;
-      font-family: "Rajdhani";
-      font-weight: 600;
-      font-size: 14px;
-      color: $white;
-      opacity: 0.7;
-      margin-left: 15px;
-   }
-
-   &__satisfying-time,
-   &__syssy-time,
-   &__apollo-time {
       display: flex;
    }
-   &__satisfying-hours-num,
-   &__satisfying-min-num,
-   &__satisfying-sec-num,
-   &__syssy-hours-num,
-   &__syssy-min-num,
-   &__syssy-sec-num,
-   &__apollo-hours-num,
-   &__apollo-min-num,
-   &__apollo-sec-num {
-      max-width: 23px;
-      width: 100%;
-      height: 27px;
-      font-family: "Rajdhani";
-      font-style: normal;
-      font-weight: 600;
-      font-size: 23px;
-      color: $white;
+   &__collection-item {
+      width: 438px !important;
+      margin-right: 35px;
    }
-
-   &__satisfying-hours-txt,
-   &__satisfying-min-txt,
-   &__satisfying-sec-txt,
-   &__syssy-hours-txt,
-   &__syssy-min-txt,
-   &__syssy-sec-txt,
-   &__apollo-min-txt,
-   &__apollo-hours-txt,
-   &__apollo-sec-txt {
-      color: $white;
-      opacity: 0.7;
-      max-width: 34px;
-      width: 100%;
-      height: 18px;
-      font-family: "Rajdhani";
-      font-style: normal;
-      font-weight: 500;
-      font-size: 14px;
-   }
-   &__satisfying-hours,
-   &__syssy-hours,
-   &__apollo-hours {
-      margin: 7px 0 0 14px;
-   }
-   &__satisfying-min,
-   &__syssy-min,
-   &__apollo-min {
-      margin: 7px 30px 0 22px;
-   }
-   &__satisfying-sec,
-   &__syssy-sec,
-   &__apollo-sec {
-      margin-top: 7px;
-   }
-   &__satisfying-btn,
-   &__syssy-btn,
-   &__apollo-btn {
-      background: linear-gradient(92.23deg, #ff56f6 21.43%, #b936ee 50.63%, #3bace2 100%, #406aff 117.04%);
-      border: 2.13px solid;
-      border-radius: 4.13158px;
-      border-image-source: linear-gradient(272.52deg, #ffa6fa 47.49%, #3c79d5 98.81%);
-      border-image-slice: 1;
-      box-shadow: 0px 4.263157844543457px 103.38158416748047px 0px #ff56f682;
-      border-radius: 2.21092px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: "Rajdhani";
-      font-weight: 600;
-      font-size: 23.0401px;
-      line-height: 29px;
-      color: $white;
-      width: 155px;
+   &__btn {
+      @include btn;
+      @include btn-border;
+      width: 156px;
       height: 49px;
-      margin-top: 35px;
-      margin-bottom: 26px;
-      padding-left: 5px;
-      & img {
-         margin-left: 12px;
+      font-family: "Rajdhani";
+      font-weight: 600;
+      font-size: 23px;
+      color: $white;
+      margin-top: 40px;
+      padding-left: 10px;
+      img {
+         margin: 8px 0 0 13px;
+         width: 32px;
+         height: 12px;
       }
    }
 
@@ -755,14 +502,124 @@ body {
          }
       }
    }
+
+   .profile-info {
+      width: 438px;
+      height: 236px;
+      display: flex;
+      justify-content: space-between;
+      padding: 33px 27px 26px 28px;
+      background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) -1.52%, rgba(255, 255, 255, 0.024) 104.35%);
+      backdrop-filter: blur(39.6002px);
+      border-style: solid;
+      border-width: 2px;
+      border-image: linear-gradient(145.77deg, rgba(255, 255, 255, 0.28) 0%, rgba(255, 255, 255, 0) 105.76%) 1;
+
+      &__product {
+         font-family: "Rajdhani";
+         font-weight: 700;
+         font-size: 23px;
+         line-height: 46px;
+         color: $white;
+      }
+      &__name {
+         width: 158px;
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+      }
+
+      &__avatar {
+         width: 37px;
+         height: 37px;
+      }
+
+      &__nickname {
+         font-family: "Rajdhani";
+         font-weight: 600;
+         font-size: 20px;
+         line-height: 46px;
+         color: white;
+      }
+
+      &__mark {
+         width: 16px;
+         height: 17px;
+      }
+
+      &__price-title {
+         font-family: "Rajdhani";
+         font-weight: 600;
+         font-size: 14px;
+         color: white;
+         opacity: 0.7;
+         margin: 21px 0 13px 0;
+      }
+
+      &__currency {
+         display: flex;
+         align-items: center;
+      }
+      &__eth {
+         font-family: "Orbitron";
+         font-weight: 700;
+         font-size: 13px;
+         color: $white;
+         margin: 0 8px 0 5px;
+      }
+      &__dollars {
+         color: $white;
+         opacity: 0.7;
+         font-family: "Rajdhani";
+         font-weight: 400;
+         font-size: 14px;
+      }
+
+      &__auction {
+         margin-top: 14px;
+      }
+      &__timer {
+         margin-left: 12px;
+         width: 135px;
+         display: flex;
+         justify-content: space-between;
+         &-text {
+            margin-left: 12px;
+            font-family: "Rajdhani";
+            font-weight: 600;
+            font-size: 14px;
+            color: $white;
+            opacity: 0.7;
+            margin-bottom: 13px;
+         }
+         &-hours,
+         &-minutes,
+         &-seconds {
+            font-family: "Rajdhani";
+            font-weight: 500;
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.7);
+         }
+         span {
+            display: flex;
+            flex-direction: column;
+            font-family: "Rajdhani";
+            font-weight: 600;
+            font-size: 23px;
+            color: $white;
+            margin-bottom: 5px;
+         }
+      }
+   }
 }
+
 // * ===== Collections =====
 .collections {
-   margin-top: 150px;
+   margin-top: 164px;
    &__content {
       // min-height: 815px;
       display: flex;
-      margin-left: 8px;
+      padding-left: 6px;
    }
    &__title {
       font-family: "Orbitron";
@@ -796,13 +653,14 @@ body {
       margin-bottom: 43px;
 
       &:hover {
-         background: linear-gradient(92.23deg, #ff56f6 21.43%, #b936ee 50.63%, #3bace2 100%, #406aff 117.04%);
-         box-shadow: 0px 4.42184px 107.23px rgba(255, 86, 246, 0.51);
+         @include btn;
+         @include btn-border;
+         color: $white;
       }
 
       &:active {
-         background: linear-gradient(92.23deg, #ff56f6 21.43%, #b936ee 50.63%, #3bace2 100%, #406aff 117.04%);
-         box-shadow: 0px 4.42184px 107.23px rgba(255, 86, 246, 0.51);
+         @include btn;
+         @include btn-border;
       }
    }
 
@@ -811,6 +669,7 @@ body {
       border: 2px solid;
       border-image-source: linear-gradient(272.52deg, rgba(255, 166, 250, 0.3) 47.49%, rgba(60, 121, 213, 0.3) 98.81%);
       border-image-slice: 1;
+      background-color: transparent;
       background-color: transparent;
       font-family: "Orbitron";
       font-weight: 700;
@@ -822,12 +681,13 @@ body {
       height: 99px;
       margin-bottom: 43px;
       &:hover {
-         background: linear-gradient(92.23deg, #ff56f6 21.43%, #b936ee 50.63%, #3bace2 100%, #406aff 117.04%);
-         box-shadow: 0px 4.42184px 107.23px rgba(255, 86, 246, 0.51);
+         color: $white;
+         @include btn;
+         @include btn-border;
       }
       &:active {
-         background: linear-gradient(92.23deg, #ff56f6 21.43%, #b936ee 50.63%, #3bace2 100%, #406aff 117.04%);
-         box-shadow: 0px 4.42184px 107.23px rgba(255, 86, 246, 0.51);
+         @include btn;
+         @include btn-border;
       }
       &:nth-child(4) {
          margin: 0;
@@ -868,7 +728,7 @@ body {
 }
 // * ===== Account =====
 .account {
-   margin-top: 150px;
+   margin-top: 155px;
    &__content {
       // height: 645px;
       margin-left: 5px;
@@ -897,18 +757,13 @@ body {
       height: 33px;
       margin-right: 5px;
       & img {
-         margin-left: 12px;
+         margin: 3px 7px 0 10px;
       }
    }
    &__wrapper {
       display: flex;
    }
-   &__slide-2 {
-      margin-left: 35px;
-   }
-   &__slide-3 {
-      margin: 0 35px;
-   }
+
    &__slide-1,
    &__slide-2,
    &__slide-3 {
@@ -921,11 +776,14 @@ body {
    }
    &__first {
       margin: 3px;
+      & img {
+         width: 100%;
+      }
    }
    &__avatar {
       position: absolute;
-      top: 101px;
-      left: 135px;
+      top: 105px;
+      left: 138px;
    }
    &__name {
       margin-top: 10px;
@@ -958,14 +816,14 @@ body {
 
    &__info {
       position: absolute;
-      bottom: 43px;
+      bottom: 38px;
    }
    &__info-user {
       width: 348px;
       display: flex;
       justify-content: space-between;
       margin-bottom: 40px;
-      margin-left: 42px;
+      margin-left: 45px;
    }
    &__folowers,
    &__artworks {
@@ -1000,16 +858,14 @@ body {
 
    &__btn-follow {
       display: block;
-      margin-left: 100px;
+      margin-left: 104px;
       font-family: "Rajdhani";
       font-style: normal;
       font-weight: 600;
       font-size: 20px;
       line-height: 25px;
-      background: linear-gradient(92.23deg, #ff56f6 21.43%, #b936ee 50.63%, #3bace2 100%, #406aff 117.04%);
-      border: 2px solid;
-      border-image-source: linear-gradient(272.52deg, #ffa6fa 47.49%, #3c79d5 98.81%);
-      border-image-slice: 1;
+      @include btn;
+      @include btn-border;
       box-shadow: 0px 3.33558px 80.8879px rgba(255, 86, 246, 0.51);
       backdrop-filter: blur(160.108px);
       color: $white;
@@ -1062,6 +918,7 @@ body {
 
       & span {
          margin-left: 5px;
+         margin-top: 3px;
          color: #ff56f6;
       }
 
@@ -1094,10 +951,6 @@ body {
       width: 100%;
    }
 
-   &__slide-2 {
-      margin: 0 35px;
-   }
-
    &__eleanor,
    &__esther,
    &__jacob,
@@ -1118,7 +971,7 @@ body {
       width: 100%;
       height: 124px;
       border-radius: 29px;
-      margin-bottom: 35px;
+      margin-bottom: 34px;
       position: relative;
       &:last-child {
          margin: 0;
@@ -1136,10 +989,11 @@ body {
    }
 
    &__avatar {
-      margin: 0 13px 0 17px;
+      margin: 0 13px;
    }
 
    &__info {
+      height: 56px;
    }
 
    &__name {
@@ -1172,7 +1026,8 @@ body {
       justify-content: center;
       align-items: center;
       position: absolute;
-      right: 20px;
+      top: 49px;
+      right: 17px;
       & p {
          font-family: "Roboto";
          font-style: normal;
@@ -1209,11 +1064,8 @@ body {
    }
 
    &__btn-explore {
-      border: 2px solid;
-      border-image-source: linear-gradient(272.52deg, rgba(255, 166, 250, 0.3) 47.49%, rgba(60, 121, 213, 0.3) 98.81%);
-      border-image-slice: 1;
-      background: linear-gradient(92.23deg, #ff56f6 21.43%, #b936ee 50.63%, #3bace2 100%, #406aff 117.04%);
-      box-shadow: 0px 4.81747px 116.824px rgba(255, 86, 246, 0.51);
+      @include btn;
+      @include btn-border;
       backdrop-filter: blur(115.619px);
       color: $white;
       font-family: "Rajdhani";
@@ -1222,12 +1074,13 @@ body {
       line-height: 25px;
       width: 235px;
       height: 50px;
-      margin-top: 55px;
+      margin-top: 60px;
+      padding-left: 5px;
    }
 }
 // * ===== nft =====
 .nft {
-   margin-top: 160px;
+   margin-top: 165px;
    background-image: url(../img/bg.png);
    background-repeat: no-repeat;
    background-position: center;
@@ -1288,17 +1141,15 @@ body {
       &:last-child {
          margin-left: 40px;
       }
-      & img {
-         margin-top: 5px;
-      }
    }
 }
 // * ===== subscribe =====
 .subscribe {
-   margin-top: 297px;
+   margin-top: 293px;
 
    &__content {
       display: flex;
+      padding-left: 8px;
    }
    &__img {
       max-width: 698px;
@@ -1332,7 +1183,7 @@ body {
       margin-bottom: 50px;
    }
    &__info {
-      margin-left: 80px;
+      margin-left: 77px;
    }
 
    &__email {
@@ -1374,7 +1225,7 @@ body {
 }
 // * ===== Info =====
 .info {
-   margin-top: 160px;
+   margin-top: 162px;
    &__content {
       border-top: 1px solid #4e3f69;
       display: flex;
@@ -1459,7 +1310,7 @@ body {
       font-feature-settings: "salt" on, "liga" off;
       color: $white;
       margin-bottom: 18px;
-      &:last-child{
+      &:last-child {
          margin: 0;
       }
    }
@@ -1490,7 +1341,7 @@ body {
 }
 
 .footer {
-   margin-top: 86px;
+   margin-top: 77px;
    &__content {
       border-top: 1px solid #4e3f69;
       display: flex;
@@ -1533,6 +1384,24 @@ body {
    }
 }
 // * ===== Mobile =====
+
+// ! ===== 1400px =====
+@media (max-width: 1400px) {
+   .top-nft {
+      &__collection {
+         margin-left: 0px;
+      }
+      &__collection-item {
+         // margin-right: 25px;
+      }
+   }
+
+   .sellers {
+      &__wrapper {
+         margin-left: 0px;
+      }
+   }
+}
 // ! ===== 1335px =====
 @media (max-width: 1335px) {
    .discover {
@@ -1728,6 +1597,11 @@ body {
 }
 // ! ===== 992px =====
 @media (max-width: 992px) {
+   .hidden {
+      height: 0px;
+      overflow: hidden;
+      transition: 1s;
+   }
    .header {
       &__menu {
          margin: 0 auto 0 90px;
@@ -1795,6 +1669,10 @@ body {
       &__logo-txt {
          width: 282px;
       }
+      &__market-list,
+      &__market-item {
+         transition: 1s;
+      }
 
       &__market,
       &__collectibles,
@@ -1805,6 +1683,7 @@ body {
          width: 100%;
          border-bottom: 1px solid #4e3f69;
          margin-bottom: 16px;
+
          &:last-child {
             border: none;
          }
@@ -2022,10 +1901,114 @@ body {
    }
 
    .account {
-      &__title,
+      margin-top: 113px;
+      &__title {
+         max-width: 196px;
+         width: 100%;
+         font-size: 16px;
+         line-height: 23px;
+         letter-spacing: 1px;
+         margin: 0 0 29px 6px;
+      }
       &__btn {
-         font-size: 21px;
-         line-height: 26px;
+         display: none;
+      }
+      &__btn-explore {
+         margin-top: 35px;
+         display: block;
+         padding-left: 5px;
+      }
+      &__explore {
+         margin: 0 auto;
+      }
+      &__slide-1,
+      &__slide-2,
+      &__slide-3 {
+         max-width: 303px !important;
+         width: 100%;
+         height: 391px;
+      }
+
+      &__first {
+         max-width: 309px !important;
+         & img {
+            width: 100%;
+         }
+      }
+
+      &__avatar {
+         top: 70px;
+         left: 93px;
+         & img {
+            width: 112px;
+            height: 112px;
+         }
+      }
+
+      &__name {
+         height: 21px;
+         text-align: center;
+         font-size: 16px;
+         line-height: 21px;
+         letter-spacing: 1px;
+         padding-left: 8px;
+      }
+      &__nickname {
+         max-width: 65px;
+         width: 100%;
+         height: 18px;
+         font-size: 14px;
+         line-height: 18px;
+         padding-left: 24px;
+         & img {
+            width: 11px;
+            height: 12px;
+            margin-left: 5px;
+         }
+      }
+      &__info {
+         left: 28px;
+         bottom: 28px;
+      }
+
+      &__info-user {
+         width: 246px;
+         display: flex;
+         justify-content: space-between;
+         text-align: center;
+         margin: 0 0 27px 0;
+      }
+      &__folowers,
+      &__artworks {
+         width: 57px;
+         text-align: center;
+      }
+      &__following {
+         width: 54px;
+         text-align: center;
+      }
+
+      &__folowers-num,
+      &__following-num,
+      &__artworks-num {
+         font-weight: 600;
+         font-size: 22px;
+         line-height: 28px;
+         color: $white;
+      }
+      &__folowers-txt,
+      &__following-txt,
+      &__artworks-txt {
+         font-size: 13px;
+         line-height: 17px;
+      }
+
+      &__btn-follow {
+         font-size: 14px;
+         line-height: 18px;
+         width: 167px;
+         height: 37px;
+         margin: 0 auto;
       }
    }
 
@@ -2178,7 +2161,6 @@ body {
    }
 
    .footer {
-
       &__dev {
          width: 296px;
       }
@@ -2199,7 +2181,7 @@ body {
          flex-direction: column-reverse;
          align-items: center;
       }
-      &__dev{
+      &__dev {
          margin: 0;
       }
 
@@ -2316,19 +2298,20 @@ body {
       }
 
       &__view {
-         margin-top: 17px;
-         font-size: 11px;
+         margin-top: 21px;
+         font-size: 8px;
          line-height: 20px;
-         margin-left: 60px;
+         margin-left: 88px;
          & img {
+            margin-left: 6px;
             width: 22px;
             height: 7px;
          }
       }
    }
 }
-// ! ===== 568px =====
-@media (max-width: 568px) {
+// ! ===== 576px =====
+@media (max-width: 576px) {
    .subscribe {
       margin-top: 208px;
       &__title {
@@ -2418,10 +2401,147 @@ body {
          margin-top: 15px;
       }
    }
-}
+   .top-nft {
+      margin-top: 108px;
+      &__title {
+         font-size: 16px;
+         line-height: 20px;
+         margin-left: 5px;
+      }
 
-// ! ===== 490px =====
-@media (max-width: 490px) {
+      &__link {
+         display: none;
+      }
+      &__collection {
+         margin-top: 35px;
+         margin-left: 10px;
+      }
+      &__collection-item {
+         width: 303px !important;
+         margin-right: 35px;
+         & img {
+            width: 100%;
+         }
+      }
+
+      &__btn {
+         width: 108px;
+         height: 34px;
+         font-size: 14px;
+         padding: 0px 0px 0 9px;
+         margin-top: 27px;
+         & img {
+            width: 22px;
+            height: 8.34px;
+            margin: 5px 0 0 15px;
+         }
+      }
+      &__btn-explore {
+         margin-top: 38px;
+         display: block;
+         padding-left: 5px;
+      }
+      &__explore {
+         margin: 0 auto;
+      }
+
+      .profile-info {
+         width: 303px;
+         height: 164px;
+         padding: 33px 19px 18px 20px;
+         &__product {
+            font-family: "Rajdhani";
+            font-style: normal;
+            font-weight: 700;
+            font-size: 13px;
+            line-height: 17px;
+            margin-bottom: 8px;
+         }
+
+         &__name {
+            width: 115px;
+            justify-content: flex-start;
+         }
+         &__avatar {
+            width: 26px;
+            height: 26px;
+         }
+
+         &__nickname {
+            font-weight: 600;
+            font-size: 12px;
+            line-height: 15px;
+            margin-left: 3px;
+         }
+
+         &__mark {
+            width: 11px;
+            height: 12px;
+            margin: 0px 0 0 14px;
+         }
+         &__price {
+            margin: 0;
+            &-title {
+               font-weight: 600;
+               font-size: 9px;
+               line-height: 11px;
+               margin: 20px 0 8px 0;
+            }
+         }
+
+         &__currency {
+            margin-left: -2px;
+            max-width: 105px;
+            width: 100%;
+            & img {
+               width: 17px;
+               height: 17px;
+            }
+         }
+
+         &__eth {
+            font-weight: 700;
+            font-size: 7px;
+            line-height: 9px;
+            margin: 0px 9px 0 6px;
+            max-width: 44px;
+            width: 100%;
+         }
+
+         &__dollars {
+            font-weight: 400;
+            font-size: 9px;
+            line-height: 11px;
+         }
+         &__auction {
+            margin-top: 2px;
+         }
+
+         &__timer-text {
+            font-weight: 600;
+            font-size: 9px;
+            line-height: 11px;
+            margin-bottom: 9px;
+            margin-left: 8px;
+         }
+         &__timer {
+            width: 100px;
+            margin-left: 8px;
+            &-hours {
+               font-size: 9px;
+            }
+            &-minutes {
+               font-size: 9px;
+            }
+            &-seconds {
+               font-size: 9px;
+            }
+            span {
+               font-size: 14px;
+            }
+         }
+      }
+   }
    .discover {
       &__title {
          font-family: "Lato";
@@ -2539,201 +2659,6 @@ body {
          margin: 40px 0 0 0;
       }
    }
-   .topNFT {
-      &__title {
-         font-size: 16px;
-         line-height: 20px;
-      }
-      &__btn {
-         display: none;
-      }
-      &__btn-explore {
-         margin-top: 35px;
-         display: block;
-         padding-left: 5px;
-      }
-      &__explore {
-         margin: 0 auto;
-      }
-
-      &__slide-1 {
-         max-width: 303px !important;
-         height: 431px;
-         width: 100%;
-      }
-      &__slide-2 {
-         max-width: 303px !important;
-         width: 100%;
-         height: 431px;
-         margin: 0 25px;
-      }
-      &__slide-3 {
-         max-width: 303px !important;
-         width: 100%;
-         height: 431px;
-         margin: 0;
-      }
-      &__img {
-         width: 303px;
-         & img {
-            width: 100%;
-         }
-      }
-      &__apollo-info,
-      &__syssy-info,
-      &__satisfying-info {
-         // width: 100%;
-         margin: 30px 0 0 15px;
-      }
-      &__apollo-avatar,
-      &__syssy-avatar,
-      &__satisfying-avatar {
-         height: 26px;
-         width: 26px;
-      }
-      &__satisfying-mark,
-      &__syssy-mark,
-      &__apollo-mark {
-         width: 11px;
-         height: 12px;
-         margin: 10px 0 0 14px;
-      }
-      &__satisfying-name,
-      &__syssy-name,
-      &__apollo-name {
-         margin-top: 5px;
-      }
-
-      &__satisfying-nickname,
-      &__syssy-nickname,
-      &__apollo-nickname {
-         max-width: 57px;
-         width: 100%;
-         font-weight: 600;
-         font-size: 12px;
-         line-height: 15px;
-         margin: 8px 0 0 3px;
-      }
-      &__apollo-product,
-      &__syssy-product,
-      &__satisfying-product {
-         font-weight: 700;
-         font-size: 14px;
-         line-height: 17px;
-         height: 17px;
-      }
-
-      &__satisfying-price-title,
-      &__syssy-price-title,
-      &__apollo-price-title {
-         font-weight: 600;
-         font-size: 9px;
-         line-height: 11px;
-         margin: 0;
-      }
-
-      &__apollo-currency,
-      &__syssy-currency,
-      &__satisfying-currency {
-         margin: 0;
-         & img {
-            width: 18px;
-            height: 18px;
-         }
-      }
-
-      &__satisfying-eth,
-      &__syssy-eth,
-      &__apollo-eth {
-         font-weight: 700;
-         font-size: 7px;
-         line-height: 9px;
-         margin: 5px 0 0 5px;
-         max-width: 44px;
-         width: 100%;
-      }
-      &__satisfying-dollars,
-      &__syssy-dollars,
-      &__apollo-dollars {
-         font-weight: 400;
-         font-size: 9px;
-         line-height: 11px;
-         margin: 2px 0 0 0;
-      }
-      &__apollo-auction,
-      &__syssy-auction,
-      &__satisfying-auction {
-         margin: 0 0 0 35px;
-      }
-
-      &__satisfying-auction-title,
-      &__syssy-auction-title,
-      &__apollo-auction-title {
-         font-size: 9px;
-         line-height: 11px;
-         margin: 31px 0 0 7px;
-      }
-
-      &__satisfying-hours,
-      &__syssy-hours,
-      &__apollo-hours {
-         margin: 0 0 0 7px;
-      }
-
-      &__satisfying-min,
-      &__syssy-min,
-      &__apollo-min {
-         margin: 0px 22px 0 18px;
-      }
-      &__satisfying-sec,
-      &__syssy-sec,
-      &__apollo-sec {
-         margin-top: 0px;
-      }
-
-      &__satisfying-hours-num,
-      &__satisfying-min-num,
-      &__satisfying-sec-num,
-      &__syssy-hours-num,
-      &__syssy-min-num,
-      &__syssy-sec-num,
-      &__apollo-hours-num,
-      &__apollo-min-num,
-      &__apollo-sec-num {
-         font-size: 14px;
-         line-height: 17px;
-         height: 17px;
-      }
-
-      &__satisfying-hours-txt,
-      &__satisfying-min-txt,
-      &__satisfying-sec-txt,
-      &__syssy-hours-txt,
-      &__syssy-min-txt,
-      &__syssy-sec-txt,
-      &__apollo-min-txt,
-      &__apollo-hours-txt,
-      &__apollo-sec-txt {
-         font-size: 9px;
-         line-height: 11px;
-      }
-      &__satisfying-btn,
-      &__syssy-btn,
-      &__apollo-btn {
-         background-image: url(../img/mobilebtn.png);
-         background-repeat: no-repeat;
-         background-position: center;
-         width: 112px;
-         height: 38px;
-         font-size: 14px;
-         line-height: 17px;
-         margin: 22px 0 15px 0;
-      }
-      &__apollo-price {
-         margin: 15px 0 0 0;
-      }
-   }
-
    .collections {
       margin-top: 108px;
       &__content {
@@ -2749,121 +2674,6 @@ body {
       }
    }
 
-   .account {
-      margin-top: 113px;
-
-      &__title {
-         max-width: 196px;
-         width: 100%;
-         font-size: 16px;
-         line-height: 23px;
-         letter-spacing: 1px;
-         margin: 0 0 29px 6px;
-      }
-      &__btn {
-         display: none;
-      }
-      &__btn-explore {
-         margin-top: 35px;
-         display: block;
-         padding-left: 5px;
-      }
-      &__explore {
-         margin: 0 auto;
-      }
-      &__slide-1,
-      &__slide-2,
-      &__slide-3 {
-         max-width: 303px !important;
-         width: 100%;
-         height: 391px;
-         margin-left: 6px;
-      }
-      &__slide-2 {
-         margin: 0 25px;
-      }
-      &__first {
-         max-width: 309px !important;
-         & img {
-            width: 100%;
-         }
-      }
-
-      &__avatar {
-         top: 70px;
-         left: 93px;
-         & img {
-            width: 112px;
-            height: 112px;
-         }
-      }
-
-      &__name {
-         height: 21px;
-         text-align: center;
-         font-size: 16px;
-         line-height: 21px;
-         letter-spacing: 1px;
-         padding-left: 8px;
-      }
-      &__nickname {
-         max-width: 65px;
-         width: 100%;
-         height: 18px;
-         font-size: 14px;
-         line-height: 18px;
-         padding-left: 24px;
-         & img {
-            width: 11px;
-            height: 12px;
-            margin-left: 5px;
-         }
-      }
-      &__info {
-         left: 28px;
-         bottom: 28px;
-      }
-
-      &__info-user {
-         width: 246px;
-         display: flex;
-         justify-content: space-between;
-         text-align: center;
-         margin: 0 0 27px 0;
-      }
-      &__folowers,
-      &__artworks {
-         width: 57px;
-         text-align: center;
-      }
-      &__following {
-         width: 54px;
-         text-align: center;
-      }
-
-      &__folowers-num,
-      &__following-num,
-      &__artworks-num {
-         font-weight: 600;
-         font-size: 22px;
-         line-height: 28px;
-         color: $white;
-      }
-      &__folowers-txt,
-      &__following-txt,
-      &__artworks-txt {
-         font-size: 13px;
-         line-height: 17px;
-      }
-
-      &__btn-follow {
-         font-size: 14px;
-         line-height: 18px;
-         width: 167px;
-         height: 37px;
-         margin: 0 auto;
-      }
-   }
    .sellers {
       margin-top: 108px;
       &__top-info {
@@ -2944,21 +2754,7 @@ body {
          }
       }
       &__btn-explore {
-         background-image: url(../img/Explorebtn.svg);
-         background: transparent;
-         box-shadow: 0px 2.35945px 57.2166px rgba(255, 86, 246, 0.51);
-         backdrop-filter: blur(56.6267px);
-         color: $white;
-         font-family: "Rajdhani";
-         font-weight: 600;
-         font-size: 20px;
-         line-height: 25px;
-         width: 140px;
-         height: 40px;
-         margin-top: 34px;
-         & img {
-            margin-left: 5px;
-         }
+         display: none;
       }
 
       &__munber2 {
@@ -3027,6 +2823,9 @@ body {
       &__menu-icon {
          top: 7px;
       }
+   }
+   .top-nft{
+      margin-top: 112px;
    }
 
    .discover {
@@ -3101,31 +2900,109 @@ body {
          margin: 46px 0 0 40px;
       }
    }
-
-   .topNFT {
-      margin-top: 105px;
-      &__top {
-         margin: 0 0 30px 9px;
+   .collections {
+      margin-top: 106px;
+      &__content {
+         padding-left: 0px;
       }
-
-      &__apollo-info,
-      &__syssy-info,
-      &__satisfying-info {
-         // width: 100%;
-         margin: 34px 0 0 20px;
-      }
-      &__apollo-auction,
-      &__syssy-auction,
-      &__satisfying-auction {
-         margin: 5px 0 0 35px;
-      }
-      &__btn-explore {
-         margin-top: 35px;
-         display: block;
-         padding-left: 5px;
+      &__title{
+         padding-left: 3px;
       }
    }
+
+   .account {
+      margin-top: 112px;
+      &__slider {
+         margin-left: 5px;
+      }
+
+      &__avatar {
+         top: 70px;
+         left: 96px;
+      }
+
+      &__btn-explore {
+         margin-top: 40px;
+         padding: 0;
+      }
+   }
+
    .sellers {
-      margin-top: 113px;
+      margin-top: 102px;
+
+      &__title {
+         margin-bottom: 17px;
+      }
+
+      &__slider {
+         margin-left: 2px;
+      }
+
+      &__wallet {
+         top: 35px;
+         right: 10px;
+      }
+      &__eleanor,
+      &__esther,
+      &__jacob,
+      &__jane,
+      &__savannah,
+      &__robert,
+      &__jerome,
+      &__kristin,
+      &__arlene,
+      &__darlene,
+      &__wade,
+      &__kathryn {
+         margin-bottom: 26px;
+      }
+      &__btn-clone {
+         margin-top: 33px;
+         margin-left: 5px;
+      }
+   }
+.nft{
+   margin-top: 106px;
+   &__title{
+      margin: 33px 0 10px 39px;
+   }
+   &__txt{
+      margin: 0 0 25px 39px;
+   }
+   &__btn{
+      margin-left: 39px;
+   }
+}
+   .subscribe {
+      margin-top: 208px;
+
+      &__content {
+         padding-left: 12px;
+         justify-content: flex-start;
+         align-items: flex-start;
+      }
+   }
+
+   .info {
+      margin-top: 107px;
+      &__content {
+        padding-left: 0px;
+      }
+
+      &__logo-logo {
+         margin-bottom: 28px;
+      }
+   }
+
+   .footer {
+      margin-top: 22px;
+      &__dev {
+         width: 310px;
+      }
+
+      &__private{
+         padding: 0;
+         margin: 0 0 0 26px;
+      }
    }
 }
